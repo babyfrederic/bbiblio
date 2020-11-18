@@ -1,0 +1,85 @@
+styleForms.css
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+flex{
+    flex-direction: column;
+}
+header {
+  flex-direction: column;
+}
+body
+  {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #12355B;
+  
+  }
+  
+.container { /*change the size of landscape here */
+    
+}
+
+li {
+    display: flex;
+    float: right;
+    width: 100%;
+    }
+}
+h1 {
+    display: flex;
+    width: 100%;
+    flex-direction: row;  
+}
+h2 {
+  display:flex;
+  width: 100%;
+  flex-direction: column;
+}
+div {
+  display:center;
+  display:flex;
+  flex-direction: row;
+}
+h4 { 
+  display:flex;
+  width: 33%;
+  flex-direction: column-reverse;
+}
+
+#formulaire {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% ;
+    grid-template-rows: 15% 10% 10% 10% 10% 10% 10% 10% 15%;
+}
+#debformulaire {
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    grid-template-rows: 100%;
+}
+#suiteformulaire {
+  display: grid;
+  grid-template-columns: 75% 25% ;
+  grid-template-rows: 50% 50%;
+}
+#midformulaire {
+      display: grid;
+      grid-template-columns: 20% 20% 20% 20% ;
+      grid-template-rows: 15% 10% 10% 10% 10% 10% 10% 10% 15%;
+}
+#finformulaire {
+  display: grid;
+  grid-template-columns: 33% 33% 33% ;
+  grid-template-rows: 25% 25%;
+}
+#articles {
+    grid-area: inherit;
+}
+
+#pub {
+    grid-area: 100%;
+}
