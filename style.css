@@ -7,7 +7,20 @@
 
 
 .main{
-    display: grid;
+   
+  display: grid;
   align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.aboutus{
+    display:grid;
+}
+
+.faq{
+    display:grid;
+}
+
+.sidebar{
+    display:grid;
 }
