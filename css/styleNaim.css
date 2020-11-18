@@ -1,20 +1,23 @@
-@font-face {
-    font-family: "garamond";
-    src: url("/font/AGaramondPro-Regular.otf");
-   }
+@font-face 
+{
+  font-family: "garamond";
+  src: url("/font/AGaramondPro-Regular.otf");
+}
 
-   @font-face {
-    font-family: "garamondbold";
-    src: url("/font/AGaramondPro-Bold.otf");
-   }
+@font-face 
+{
+    
+  font-family: "garamondbold";
+  src: url("/font/AGaramondPro-Bold.otf");
+}
 
-   *{
-       box-sizing: border-box;
-       margin: 0;
-       padding: 0;
-       scrollbar-color: transparent transparent; /* thumb and track color */
-       scrollbar-width: 0px;
-   }
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scrollbar-color: transparent transparent; /* thumb and track color */
+  scrollbar-width: 0px;
+  }
 
 nav{
     background-color: #18273d;
