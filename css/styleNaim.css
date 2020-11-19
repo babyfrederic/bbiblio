@@ -165,21 +165,21 @@ nav header img{
 
   
   .carousel__slide:nth-child(1) {
-    background-image: url("/image/slide1.jpg");
+    background-image: url("../image/slide1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
 
   .carousel__slide:nth-child(2) {
-    background-image: url("/image/slide2.jpg");
+    background-image: url("../image/slide2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
 
   .carousel__slide:nth-child(3) {
-    background-image: url("/image/slide3.jpg");
+    background-image: url("../image/slide3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
