@@ -60,6 +60,10 @@
       }
 /* header*/
 
+ html{
+  background-color: #F7F4EC;
+}
+
   h1, h2, h3{
     font-family: "garamond";
     text-align: center;
@@ -106,4 +110,106 @@
   object-fit: cover;
   padding: 30px;
   
+}
+
+/**** Logos ****/
+
+.logos{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-color: #BFA959;
+  padding:40px 0;
+  border-top:3px solid #18273d;
+  border-bottom:3px solid #18273d;
+  align-items: center;
+  align-content: center;
+}
+
+.logos img{
+  width: 100px;
+}
+
+ #titre{
+  grid-row:1/2;
+  grid-column: 1/-1;
+  color:#18273D;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:40px;
+}
+
+#titre .line{
+  width: 300px;
+  height: 3px;
+  background-color: #18273D;
+  margin-right: 50px;
+  margin-left:50px;
+}
+
+#titre h1{
+  font-size: 48px;
+  font-family: garamond;
+  color:#18273D;
+  padding-bottom:20px;
+}
+
+footer{
+  display:flex;
+  justify-content: space-around;
+  background-color: #18273d;
+  padding:40px 0;
+  font-family: "garamond";
+}
+
+footer h5{
+    color: #F7F4EC;
+    transition: 0.3s;
+    text-decoration: none;
+    font-size: 22px;
+    padding:30px 0;
+}
+
+.partenaires a, .coordonner a {
+  display: block;
+  color: #F7F4EC;
+  text-decoration: none;
+  font-size: 20px;
+  transition:0.3s;
+}
+
+.coordonner a {
+text-align: center;
+padding:5px 0;
+}
+
+.partenaires a:hover, .coordonner a:hover  {
+  color:#bbb6b6;
+}
+
+.coordonner{
+  padding:30px 0;
+}
+
+.btn {
+  background-color: #BFA959;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  cursor:pointer;
+  border-radius:5px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.reseau{
+  display: flex;
+  justify-content: space-between;
 }
