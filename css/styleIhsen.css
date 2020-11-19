@@ -1,0 +1,28 @@
+
+    @font-face {
+        font-family: 'MyWebFont';
+        src:   url('/font/AGaramondPro-Regular.woff') format('woff');
+      }
+
+
+
+  h1, h2 {
+    font-family: 'MyWebFont', sans-serif;
+  }
+
+.main>ul{
+  padding: 4rem 2rem;
+  display: grid;
+  align-items: center;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+}
+.main>h1 {
+    text-align: center;
+}
+
+.sidebar{
+    display:grid;
+    grid-template-rows: repeat(4, 400px);
+}

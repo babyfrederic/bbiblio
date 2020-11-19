@@ -59,5 +59,39 @@
 
 html{
     font-family: 'AGaramondPro';
+
+
 }
 
+body{
+    width: 100vw;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: var(--hovernavcolor);
+
+
+}
+*{
+    box-sizing: border-box;
+}
+
+.main {
+    display: grid;
+    justify-content: center;
+    margin: 1rem 2rem;
+    background-color: #fff;
+
+}
+// .button--primary
+
+// .card
+//  .aside
+// .header
+// .header__title1
+// .aside
+// .aside__titre
+#dark:checked ~ .main{
+    color: $unexisting;
+    background-color: var(--hovernavcolor);
+    color: #fff;
+}

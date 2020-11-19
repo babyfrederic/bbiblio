@@ -1,12 +1,15 @@
-@font-face {
-    font-family: "garamond";
-    src: url("/font/AGaramondPro-Regular.otf");
-   }
+@font-face 
+{
+  font-family: "garamond";
+  src: url("/font/AGaramondPro-Regular.otf");
+}
 
-   @font-face {
-    font-family: "garamondbold";
-    src: url("/font/AGaramondPro-Bold.otf");
-   }
+@font-face 
+{
+    
+  font-family: "garamondbold";
+  src: url("/font/AGaramondPro-Bold.otf");
+}
 
    *{
        box-sizing: border-box;
@@ -16,6 +19,7 @@
        scrollbar-width: 0px;
       
    }
+
 
    *::-webkit-scrollbar {
     width: 0;

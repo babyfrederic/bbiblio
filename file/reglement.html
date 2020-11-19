@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/brunoScss/reglement.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <input type="radio" name="dev" id="normal" autocomplete="off">
+    <input type="radio" name="dev" id="dark" autocomplete="off" checked>
+    <nav>
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary active" for="normal">
+                normal
+            </label>
+            <label class="btn btn-primary" for="dark">
+                dark-mode
+            </label>
+        </div>
+    </nav>
+    <section id="reglement" class="main reglement">
+        <header class="reglement__header header">
+            <h1 class="reglement__header__title1 header__title1">Le Réglement</h1>
+        </header>
+
+        <main class="reglement__main">
+            <article class="reglement__article">
+                <h3 class="reglement__article__titre">Article $</h3>
+                <p class="reglement__article__regle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos error
+                    quis commodi excepturi, iusto sunt asperiores nesciunt voluptatum eius, quod nulla praesentium
+                    delectus neque odit distinctio. Rem dolorem unde facere?</p>
+            </article>
+        </main>
+        <aside class="reglement__aside aside">
+            <button class="aside__toggle__button"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i> Inscrivez-vous</button>
+            <section class="reglement__aside__inscription auteur card">
+                <h3 class="aside__titre3">Cher auteur</h3>
+                <p class="aside__accroche">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
+                    reiciendis.</p>
+                <button class="aside__button">Je participe !</button>
+            </section>
+            <section class="reglement__aside__inscription jury carte">
+                <h3 class="aside__titre3">Cher membre du jury</h3>
+                <p class="aside__accroche">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
+                    reiciendis.</p>
+                <button class="aside__button button--primary">Je postule !</button>
+            </section>
+        </aside>
+    </section>
+</body>
+<script src="../css/brunoScss/generator.js"></script>
+
+<script>
+
+    const regle = n => `
+            <article class="oeuvre__article">
+                <h3 class="oeuvre__article__titre">Article ${n}</h3>
+                <p class="oeuvre__article__regle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos error quis commodi excepturi, iusto sunt asperiores nesciunt voluptatum eius, quod nulla praesentium delectus neque odit distinctio. Rem dolorem unde facere?</p>
+            </article>`
+
+
+    document.querySelector('.reglement__main').innerHTML = reglement__main(10)
+</script>
+
+
+</html>
