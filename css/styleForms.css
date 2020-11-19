@@ -193,15 +193,20 @@ nav header img{
 }
 .boxone{
   grid-column: 3 / 4;
-  grid-row: 1 / 3
+  grid-row: 1 / 3;
 }
 .boxtwo{
   grid-column: 1 / 4;
-  grid-row: 1 / 3
+  grid-row: 1 / 3;
+}
+.boxthree{
+  grid-column: 1/ 4;
+  grid-row: 20% 20% 20% 20% 20%;
 }
 .boxleft{
-  grid-column: 1 ;
-  grid-row:  90% 10%;
+  grid-column: 1 / 3 ;
+  grid-row: 1 / 3;
+}
 }
 h1 {
     display: grid;
