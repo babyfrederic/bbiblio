@@ -5,15 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/styleNaim.css">
+
     <link rel="stylesheet" href="../css/brunoScss/oeuvres.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <input type="radio" name="dev" id="normal" autocomplete="off">
-    <input type="radio" name="dev" id="dark" autocomplete="off" checked>
-    <nav>
+    <input type="radio" name="dev" id="normal" autocomplete="off" style="display: none;">
+    <input type="radio" name="dev" id="dark" autocomplete="off" checked style="display: none;">
+    <nav style="width: 100%; background-color: darkblue; color: wheat; padding: 1rem;">
+        <div>
+            <label for="public">Public</label>
+            <label for="public">Admin</label>
+            <label for="public">Jury</label>
+        </div>
         <div class="btn-group" data-toggle="buttons">
             <label class="btn btn-primary active" for="normal">
                 normal
@@ -23,49 +30,137 @@
             </label>
         </div>
     </nav>
-    <section id="oeuvre" class="main oeuvres">
+    <nav>
+        <header>
+            <img src="../image/logo.png" alt="">
+        </header>
+        <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="reglement.html">Règlement</a></li>
+            <li><a href="oeuvre.html">Oeuvres</a></li>
+            <li><a href="apropos.html">A propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="inscription.html">Inscription/Connexion</a></li>
+            <li><a href="#"><img src="./image/search.png" alt=""></a></li>
+        </ul>
+    </nav>
+    <section id="oeuvres" class="main oeuvres">
         <header class="oeuvre__header header">
             <h1 class="oeuvre__header__title1 header__title1">Les oeuvres</h1>
         </header>
 
-        <main class="oeuvre__main">
-            <article class="oeuvre__article">
-                <h3 class="oeuvre__article__titre">Article $</h3>
-                <p class="oeuvre__article__regle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos error
-                    quis commodi excepturi, iusto sunt asperiores nesciunt voluptatum eius, quod nulla praesentium
-                    delectus neque odit distinctio. Rem dolorem unde facere?</p>
-            </article>
+        <main class="oeuvres__main">
+            <section id="oeuvres">
+                <input type="radio" name="categorie" id="all" checked>
+                <!-- fermer le popup -->
+                <!-- input[type=radio]#categorie$[name=categorie]*5 -->
+                <input type="radio" id="categorie1" name="categorie">
+                <input type="radio" id="categorie2" name="categorie">
+                <input type="radio" id="categorie3" name="categorie">
+                <input type="radio" id="categorie4" name="categorie">
+                <input type="radio" id="categorie5" name="categorie">
+                <input type="checkbox" id="favoris" name="favoris">
+                <input type="checkbox" id="note" name="note">
+                <header class="entete">
+                    <button> Filtre :</button>
+                    <ul>
+                        <li>
+                            <label for="all">Favoris</label>
+                        </li>
+                        <li>
+                            <label for="all">Tous</label>
+                        </li>
+                        <li>
+                            <label for="categorie1">Categorie 1</label>
+                        </li>
+                        <li>
+                            <label for="categorie2">Categorie 2</label>
+                        </li>
+                        <li>
+                            <label for="categorie3">Categorie 3</label>
+                        </li>
+                        <li>
+                            <label for="categorie4">Categorie 4</label>
+                        </li>
+                        <li>
+                            <label for="categorie5">Categorie 5</label>
+                        </li>
+                    </ul>
+                </header>
+                <!-- case de description produit -->
+                <main class="oeuvres__container">
+                    <article id="oeuvre1" class="oeuvre__article categorie1 article1">
+                        <input type="checkbox" name="favori" id="favoriN">
+                        <header class="oeuvre__header">
+                            <button class="oeuvre__header__button">
+                                <h3 class="oeuvre__titre">beta test</h3>
+                            </button>
+                        </header>
+                        <main class="oeuvre__main">
+                            <picture>
+                                <img src="../image/logo.png" alt="">
+                            </picture>
+                            <p class="oeuvre__desc">
+                                oeuvre__article categorie1 article DESCRIPTION ipsum dolor, sit amet consectetur adipisicing elit. Non unde quos aspernatur ex
+                                quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
+                            </p>
+                        </main>
+                        <footer class="oeuvre__footer">
+                            <button class="pdf_loading button--primary">Telecharger</button>
+                            <section class="jury jury__note">
+                                <button class="pdf_loading button--primary">Noter</button>
+                                <ul>
+                                    li>p
+                                </ul>
+                            </section>
+                        </footer>
+                    </article>
+                    <article data-c="oeuvre__article categorie1 article" data-n="10">
+                        
+                    </article>
+                    <article data-c="oeuvre__article categorie2 article" data-n="5">
+                        
+                    </article>
+                    <article data-c="oeuvre__article categorie3 article" data-n="12">
+                        
+                    </article>
+                </main>
+
+            </section>
         </main>
         <aside class="oeuvre__aside aside">
-            <button class="aside__toggle__button"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
-                Inscrivez-vous</button>
-            <section class="oeuvre__aside__inscription auteur card">
-                <h3 class="aside__titre">Cher auteur</h3>
-                <p class="aside__accroche">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
-                    reiciendis.</p>
-                <button class="aside__button">Je participe !</button>
-            </section>
-            <section class="oeuvre__aside__inscription jury carte">
-                <h3 class="aside__titre">Cher membre du jury</h3>
-                <p class="aside__accroche">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
-                    reiciendis.</p>
-                <button class="aside__button button--primary">Je postule !</button>
-            </section>
+
         </aside>
     </section>
+
 </body>
-<script src="../css/brunoScss/generator.js"></script>
 
 <script>
 
-    const regle = n => `
-            <article class="oeuvre__article">
-                <h3 class="oeuvre__article__titre">Article ${n}</h3>
-                <p class="oeuvre__article__regle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos error quis commodi excepturi, iusto sunt asperiores nesciunt voluptatum eius, quod nulla praesentium delectus neque odit distinctio. Rem dolorem unde facere?</p>
-            </article>`
+    const article = (n,className) =>`
+    <article id="oeuvre${n}" class="${className}${n}" data-c="reglement__article" data-n="10">
+        <input type="checkbox" name="favori" id="favoriN">
+        <header class="oeuvre__header">
+            <button class="oeuvre__header__button">
+                <h3 class="oeuvre__titre">Titre du boucin ${n}</h3>
+            </button>
+        </header>
+        <main class="oeuvre__main">
+            <p class="oeuvre__desc">
+                ${className} DESCRIPTION ipsum dolor, sit amet consectetur adipisicing elit. Non unde quos aspernatur ex
+                quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
+            </p>
+        </main>
+        <footer class="oeuvre__footer">
+            <button class="pdf_loading button--primary">Telecharger</button>
+
+            <button class="pdf_loading button--primary">Noter</button>
+        </footer>
+    </article>`
 
 
-    // document.querySelector('.reglement__main').innerHTML = reglement__main(10)
+
 </script>
+<script src="../css/brunoScss/generator.js"></script>
 
 </html>

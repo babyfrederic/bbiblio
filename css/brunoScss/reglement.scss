@@ -21,27 +21,28 @@ $unexisting: #fff;
         position: fixed;
         transition: 0.5s ease;
         width: 90%;
+        max-width: 350px;
         top: 15%;
-        right: -90%;
-
+        right: 0;
+        transform: translateX(100%);
         padding-right: 1.5rem;
 
         &__inscription{
             padding: 2rem;
             .aside__titre3{
-                margin-bottom: 0rem;
+                margin: 0.5rem 0;
             }
             .aside__button{
                 display: block;
-                margin-left: auto;
                 padding: 0.5rem;
                 width: 7rem;
-
+                margin: 1rem .5rem .5rem auto;
             }
         }
 
         &:focus-within{
-            right: 0;
+            transform: translateX(0);
+
         }
     }
     .aside__toggle__button {
@@ -80,6 +81,7 @@ $unexisting: #fff;
         grid-area: 2/2/3/3;
         display: block;
         position: sticky;
+        margin: 3rem auto;
         top: 0;
         right: 0;
         .aside__toggle__button{

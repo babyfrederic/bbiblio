@@ -1,14 +1,14 @@
 @font-face 
 {
   font-family: "garamond";
-  src: url("/font/AGaramondPro-Regular.otf");
+  src: url("/font/AGaramondPro-Regular.otf"), url("../font/AGaramondPro-Regular.otf");
 }
 
 @font-face 
 {
     
   font-family: "garamondbold";
-  src: url("/font/AGaramondPro-Bold.otf");
+  src: url("/font/AGaramondPro-Bold.otf"), url("../font/AGaramondPro-Bold.otf");
 }
 
 *{

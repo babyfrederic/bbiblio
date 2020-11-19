@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/styleNaim.css">
     <link rel="stylesheet" href="../css/brunoScss/reglement.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <input type="radio" name="dev" id="normal" autocomplete="off">
-    <input type="radio" name="dev" id="dark" autocomplete="off" checked>
-    <nav>
+    <input type="radio" name="dev" id="normal" autocomplete="off" style="display: none;">
+    <input type="radio" name="dev" id="dark" autocomplete="off" checked style="display: none;">
+    <nav style="width: 100%; background-color: darkblue; color: wheat; padding: 1rem;">
+        <div></div>
         <div class="btn-group" data-toggle="buttons">
             <label class="btn btn-primary active" for="normal">
                 normal
@@ -22,13 +24,27 @@
             </label>
         </div>
     </nav>
+    <nav>
+        <header>
+            <img src="../image/logo.png" alt="">
+        </header>
+        <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="reglement.html">Règlement</a></li>
+            <li><a href="oeuvre.html">Oeuvres</a></li>
+            <li><a href="apropos.html">A propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="inscription.html">Inscription/Connexion</a></li>
+            <li><a href="#"><img src="./image/search.png" alt=""></a></li>
+        </ul>
+    </nav>
     <section id="reglement" class="main reglement">
         <header class="reglement__header header">
             <h1 class="reglement__header__title1 header__title1">Le Réglement</h1>
         </header>
 
         <main class="reglement__main">
-            <article class="reglement__article">
+            <article class="reglement__article" data-c="reglement__article" data-n="10">
                 <h3 class="reglement__article__titre">Article $</h3>
                 <p class="reglement__article__regle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos error
                     quis commodi excepturi, iusto sunt asperiores nesciunt voluptatum eius, quod nulla praesentium
@@ -52,19 +68,18 @@
         </aside>
     </section>
 </body>
-<script src="../css/brunoScss/generator.js"></script>
 
 <script>
 
-    const regle = n => `
-            <article class="oeuvre__article">
-                <h3 class="oeuvre__article__titre">Article ${n}</h3>
-                <p class="oeuvre__article__regle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos error quis commodi excepturi, iusto sunt asperiores nesciunt voluptatum eius, quod nulla praesentium delectus neque odit distinctio. Rem dolorem unde facere?</p>
+    const article = (n, className ="") => `
+            <article class="reglement__article ${className}">
+                <h3 class="article__titre">Article ${n}</h3>
+                <p class="reglement__article__regle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos error quis commodi excepturi, iusto sunt asperiores nesciunt voluptatum eius, quod nulla praesentium delectus neque odit distinctio. Rem dolorem unde facere?</p>
             </article>`
 
 
-    document.querySelector('.reglement__main').innerHTML = reglement__main(10)
 </script>
+<script src="../css/brunoScss/generator.js"></script>
 
 
 </html>

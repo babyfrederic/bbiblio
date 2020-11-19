@@ -11,7 +11,7 @@
 }
 @font-face {
     font-family: 'AGaramondPro';
-    font-style: italic;
+    font-style: bold;
     src:
         local('AGaramondPro-Bold'),
 
@@ -80,18 +80,27 @@ body{
     justify-content: center;
     margin: 1rem 2rem;
     background-color: #fff;
-
 }
-// .button--primary
-
-// .card
-//  .aside
-// .header
-// .header__title1
-// .aside
-// .aside__titre
 #dark:checked ~ .main{
     color: $unexisting;
     background-color: var(--hovernavcolor);
     color: #fff;
 }
+
+// .button--primary
+
+// .card
+//  .aside
+.header{
+    margin-top: 2rem;
+}
+article{
+    margin: 2rem 0;
+}
+
+.article__titre{
+    margin: 1rem 0 1rem 0;
+}
+// .header__title1
+// .aside
+// .aside__titre
