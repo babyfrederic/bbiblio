@@ -80,10 +80,11 @@ $unexisting: #fff;
     &__aside{
         grid-area: 2/2/3/3;
         display: block;
-        position: sticky;
+        position: relative;
         margin: 3rem auto;
         top: 0;
         right: 0;
+        transform: unset;
         .aside__toggle__button{
             display: none;
         }
