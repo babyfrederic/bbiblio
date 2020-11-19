@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styleNaim.css">
+    <title>Bbiblio</title>
+</head>
+<body>
+    <nav>
+        <header>
+            <img src="./image/logo.png" alt="">
+        </header>
+        <ul>
+            <li><a href="./index.html">Accueil</a></li>
+            <li><a href="#">Règlement</a></li>
+            <li><a href="#">Oeuvres</a></li>
+            <li><a href="#">A propos</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Inscription/Connexion</a></li>
+            <li><a href="#"><img src="./image/search.png" alt=""></a></li>
+        </ul>
+    </nav>
+
+    <section class="carousel" aria-label="Gallery">
+        <ol class="carousel__viewport">
+          <li id="carousel__slide1"
+              tabindex="0"
+              class="carousel__slide">
+            <div class="carousel__snapper">
+              <a href="#carousel__slide4"
+                 class="carousel__prev">Go to last slide</a>
+              <a href="#carousel__slide2"
+                 class="carousel__next">Go to next slide</a>
+            </div>
+          </li>
+          <li id="carousel__slide2"
+              tabindex="0"
+              class="carousel__slide">
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide1"
+               class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide3"
+               class="carousel__next">Go to next slide</a>
+          </li>
+          <li id="carousel__slide3"
+              tabindex="0"
+              class="carousel__slide">
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide2"
+               class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide4"
+               class="carousel__next">Go to next slide</a>
+          </li>
+          <li id="carousel__slide4"
+              tabindex="0"
+              class="carousel__slide">
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide3"
+               class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide1"
+               class="carousel__next">Go to first slide</a>
+          </li>
+        </ol>
+      </section>
+    
+</body>
+</html>
