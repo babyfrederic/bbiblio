@@ -192,8 +192,8 @@ nav header img{
   grid-auto-rows: minmax(100px, auto);
 }
 .boxone{
-  grid-column: 3 / 4;
-  grid-row: 1 / 3;
+  grid-column: 3/ 4;
+  grid-row: 1 / 5;
 }
 .boxtwo{
   grid-column: 1 / 4;
@@ -207,7 +207,19 @@ nav header img{
   grid-column: 1 / 3 ;
   grid-row: 1 / 3;
 }
+/* BOUTONS DE VALIDATION*/
+.button1 {
+  transform: translateX(40%);
+  transform-origin: left bottom;
+  padding:1% 1%;
 }
+.button2 {
+  transform: translateX(30%);
+  transform-origin: right bottom;
+  padding:2% 2%;
+}
+
+
 h1 {
     display: grid;
     grid-template-columns: 50% 50% ; 
