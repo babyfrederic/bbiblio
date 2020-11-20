@@ -5,10 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/styleNaim.css">
-
     <link rel="stylesheet" href="../css/brunoScss/oeuvres.css">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -16,6 +13,7 @@
     <input type="radio" name="dev" id="normal" autocomplete="off" style="display: none;">
     <input type="radio" name="dev" id="dark" autocomplete="off" checked style="display: none;">
     <nav style="width: 100%; background-color: darkblue; color: wheat; padding: 1rem;">
+        <div>DEV NAV :</div>
         <div>
             <label for="public">Public</label>
             <label for="public">Admin</label>
@@ -23,7 +21,7 @@
         </div>
         <div class="btn-group" data-toggle="buttons">
             <label class="btn btn-primary active" for="normal">
-                normal
+                light-mode
             </label>
             <label class="btn btn-primary" for="dark">
                 dark-mode
@@ -59,33 +57,49 @@
                 <input type="radio" id="categorie3" name="categorie">
                 <input type="radio" id="categorie4" name="categorie">
                 <input type="radio" id="categorie5" name="categorie">
+                <input type="radio" id="disposition1" name="disposition" checked>
+                <input type="radio" id="disposition2" name="disposition">
                 <input type="checkbox" id="favoris" name="favoris">
                 <input type="checkbox" id="note" name="note">
                 <header class="entete">
                     <button> Filtre :</button>
-                    <ul>
-                        <li>
-                            <label for="all">Favoris</label>
+                    <ul class="filtre__liste">
+                        <li class="btn__favoris">
+                            <label for="favoris">Favoris <i class="fa fa-heart" aria-hidden="true"></i></label>
+                        </li>
+                        <li class="btn__note">
+                            <label for="favoris">Noté <i class="fa fa-check" aria-hidden="true"></i></label>
                         </li>
                         <li>
                             <label for="all">Tous</label>
                         </li>
                         <li>
-                            <label for="categorie1">Categorie 1</label>
+                            <label for="categorie1"><i class="fa fa-child" aria-hidden="true"></i> DB </label>
                         </li>
                         <li>
-                            <label for="categorie2">Categorie 2</label>
+                            <label for="categorie2"><i class="fa fa-transgender" aria-hidden="true"></i> Roman </label>
                         </li>
                         <li>
-                            <label for="categorie3">Categorie 3</label>
+                            <label for="categorie3"><i class="fa fa-thermometer-half" aria-hidden="true"></i> Chaud
+                            </label>
                         </li>
-                        <li>
-                            <label for="categorie4">Categorie 4</label>
+                        <li class="filtre__btn__admin--displaynone">
+                            <label for="categorie4"><i class="fa fa-font-awesome" aria-hidden="true"></i> Aventure
+                            </label>
                         </li>
-                        <li>
-                            <label for="categorie5">Categorie 5</label>
+                        <li class="filtre__btn__admin--displaynone">
+                            <label for="categorie5"><i class="fa fa-search" aria-hidden="true"></i> Thriller </label>
                         </li>
                     </ul>
+                    <ul class="dispo__liste">
+                        <li>
+                            <label for="disposition1" class="btn__disposition btn" alt="liste"><i class="fa fa-list" aria-hidden="true"></i></label>
+                        </li>
+                        <li>
+                            <label for="disposition2" class="btn__disposition btn" alt="grille"><i class="fa fa-th" aria-hidden="true"></i></label>
+                        </li>
+                    </ul>
+                    <input type="text" name="seach" id="">
                 </header>
                 <!-- case de description produit -->
                 <main class="oeuvres__container">
@@ -93,15 +107,16 @@
                         <input type="checkbox" name="favori" id="favoriN">
                         <header class="oeuvre__header">
                             <button class="oeuvre__header__button">
-                                <h3 class="oeuvre__titre">beta test</h3>
+                                <h3 class="oeuvre__titre">marine dit non à l'Europe</h3>
                             </button>
                         </header>
                         <main class="oeuvre__main">
                             <picture>
-                                <img src="../image/logo.png" alt="">
+                                <img src="../image/sl11.jpg" alt="">
                             </picture>
                             <p class="oeuvre__desc">
-                                oeuvre__article categorie1 article DESCRIPTION ipsum dolor, sit amet consectetur adipisicing elit. Non unde quos aspernatur ex
+                                oeuvre__article categorie1 article DESCRIPTION ipsum dolor, sit amet consectetur
+                                adipisicing elit. Non unde quos aspernatur ex
                                 quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
                             </p>
                         </main>
@@ -110,19 +125,131 @@
                             <section class="jury jury__note">
                                 <button class="pdf_loading button--primary">Noter</button>
                                 <ul>
-                                    li>p
+                                    li>p{critere*}+section.inputs>label*8{critère $}>input:radio[name=unadix][id=unadix$]*10^textarea.jury__note[value=note][name=note]+textarea.jury__avis
+                                    <li>
+                                        <p>critere*</p>
+                                        <section class="inputs">
+                                            <label for="">
+                                                critère 1
+                                                <input type="radio" name="unadix" id="unadix1">
+                                                <input type="radio" name="unadix" id="unadix2">
+                                                <input type="radio" name="unadix" id="unadix3">
+                                                <input type="radio" name="unadix" id="unadix4">
+                                                <input type="radio" name="unadix" id="unadix5">
+                                                <input type="radio" name="unadix" id="unadix6">
+                                                <input type="radio" name="unadix" id="unadix7">
+                                                <input type="radio" name="unadix" id="unadix8">
+                                                <input type="radio" name="unadix" id="unadix9">
+                                                <input type="radio" name="unadix" id="unadix10">
+                                            </label>
+                                            <label for="">
+                                                critère 2
+                                                <input type="radio" name="unadix" id="unadix1">
+                                                <input type="radio" name="unadix" id="unadix2">
+                                                <input type="radio" name="unadix" id="unadix3">
+                                                <input type="radio" name="unadix" id="unadix4">
+                                                <input type="radio" name="unadix" id="unadix5">
+                                                <input type="radio" name="unadix" id="unadix6">
+                                                <input type="radio" name="unadix" id="unadix7">
+                                                <input type="radio" name="unadix" id="unadix8">
+                                                <input type="radio" name="unadix" id="unadix9">
+                                                <input type="radio" name="unadix" id="unadix10">
+                                            </label>
+                                            <label for="">
+                                                critère 3
+                                                <input type="radio" name="unadix" id="unadix1">
+                                                <input type="radio" name="unadix" id="unadix2">
+                                                <input type="radio" name="unadix" id="unadix3">
+                                                <input type="radio" name="unadix" id="unadix4">
+                                                <input type="radio" name="unadix" id="unadix5">
+                                                <input type="radio" name="unadix" id="unadix6">
+                                                <input type="radio" name="unadix" id="unadix7">
+                                                <input type="radio" name="unadix" id="unadix8">
+                                                <input type="radio" name="unadix" id="unadix9">
+                                                <input type="radio" name="unadix" id="unadix10">
+                                            </label>
+                                            <label for="">
+                                                critère 4
+                                                <input type="radio" name="unadix" id="unadix1">
+                                                <input type="radio" name="unadix" id="unadix2">
+                                                <input type="radio" name="unadix" id="unadix3">
+                                                <input type="radio" name="unadix" id="unadix4">
+                                                <input type="radio" name="unadix" id="unadix5">
+                                                <input type="radio" name="unadix" id="unadix6">
+                                                <input type="radio" name="unadix" id="unadix7">
+                                                <input type="radio" name="unadix" id="unadix8">
+                                                <input type="radio" name="unadix" id="unadix9">
+                                                <input type="radio" name="unadix" id="unadix10">
+                                            </label>
+                                            <label for="">
+                                                critère 5
+                                                <input type="radio" name="unadix" id="unadix1">
+                                                <input type="radio" name="unadix" id="unadix2">
+                                                <input type="radio" name="unadix" id="unadix3">
+                                                <input type="radio" name="unadix" id="unadix4">
+                                                <input type="radio" name="unadix" id="unadix5">
+                                                <input type="radio" name="unadix" id="unadix6">
+                                                <input type="radio" name="unadix" id="unadix7">
+                                                <input type="radio" name="unadix" id="unadix8">
+                                                <input type="radio" name="unadix" id="unadix9">
+                                                <input type="radio" name="unadix" id="unadix10">
+                                            </label>
+                                            <label for="">
+                                                critère 6
+                                                <input type="radio" name="unadix" id="unadix1">
+                                                <input type="radio" name="unadix" id="unadix2">
+                                                <input type="radio" name="unadix" id="unadix3">
+                                                <input type="radio" name="unadix" id="unadix4">
+                                                <input type="radio" name="unadix" id="unadix5">
+                                                <input type="radio" name="unadix" id="unadix6">
+                                                <input type="radio" name="unadix" id="unadix7">
+                                                <input type="radio" name="unadix" id="unadix8">
+                                                <input type="radio" name="unadix" id="unadix9">
+                                                <input type="radio" name="unadix" id="unadix10">
+                                            </label>
+                                            <label for="">
+                                                critère 7
+                                                <input type="radio" name="unadix" id="unadix1">
+                                                <input type="radio" name="unadix" id="unadix2">
+                                                <input type="radio" name="unadix" id="unadix3">
+                                                <input type="radio" name="unadix" id="unadix4">
+                                                <input type="radio" name="unadix" id="unadix5">
+                                                <input type="radio" name="unadix" id="unadix6">
+                                                <input type="radio" name="unadix" id="unadix7">
+                                                <input type="radio" name="unadix" id="unadix8">
+                                                <input type="radio" name="unadix" id="unadix9">
+                                                <input type="radio" name="unadix" id="unadix10">
+                                            </label>
+                                            <label for="">
+                                                critère 8
+                                                <input type="radio" name="unadix" id="unadix1">
+                                                <input type="radio" name="unadix" id="unadix2">
+                                                <input type="radio" name="unadix" id="unadix3">
+                                                <input type="radio" name="unadix" id="unadix4">
+                                                <input type="radio" name="unadix" id="unadix5">
+                                                <input type="radio" name="unadix" id="unadix6">
+                                                <input type="radio" name="unadix" id="unadix7">
+                                                <input type="radio" name="unadix" id="unadix8">
+                                                <input type="radio" name="unadix" id="unadix9">
+                                                <input type="radio" name="unadix" id="unadix10">
+                                            </label>
+                                            <textarea name="note" id="" cols="30" rows="10" class="jury__note" value="note"></textarea>
+                                            <textarea name="" id="" cols="30" rows="10" class="jury__avis"></textarea>
+                                        </section>
+                                    </li>
+                               
                                 </ul>
                             </section>
                         </footer>
                     </article>
                     <article data-c="oeuvre__article categorie1 article" data-n="10">
-                        
+
                     </article>
                     <article data-c="oeuvre__article categorie2 article" data-n="5">
-                        
+
                     </article>
                     <article data-c="oeuvre__article categorie3 article" data-n="12">
-                        
+
                     </article>
                 </main>
 
@@ -137,7 +264,7 @@
 
 <script>
 
-    const article = (n,className) =>`
+    const article = (n, className) => `
     <article id="oeuvre${n}" class="${className}${n}" data-c="reglement__article" data-n="10">
         <input type="checkbox" name="favori" id="favoriN">
         <header class="oeuvre__header">

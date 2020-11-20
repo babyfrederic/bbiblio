@@ -1,79 +1,104 @@
-@font-face {
-    font-family: 'AGaramondPro';
-    src:
-        local('AGaramondPro-Regular'),
+/* 
+dev :bruno
+biblio inspiration pulitzer
+stylisation des pages oeuvres et réglement
+Des tags
 
-        url('../font/AGaramondPro-Regular.woff')
-        format('woff'),
-    
-        url('../font/AGaramondPro-Regular.otf')
-        format('truetype');
+*/
+
+@font-face {
+    font-family: "AGaramondPro";
+    src: local("AGaramondPro-Regular"), url("../font/AGaramondPro-Regular.woff") format("woff"),
+        url("../font/AGaramondPro-Regular.otf") format("truetype");
 }
 @font-face {
-    font-family: 'AGaramondPro';
+    font-family: "AGaramondPro";
     font-style: bold;
-    src:
-        local('AGaramondPro-Bold'),
-
-        url('../font/AGaramondPro-Bold.woff')
-        format('woff'),
-    
-        url('../font/AGaramondPro-Bold.otf')
-        format('truetype');
+    src: local("AGaramondPro-Bold"), url("../font/AGaramondPro-Bold.woff") format("woff"),
+        url("../font/AGaramondPro-Bold.otf") format("truetype");
 }
 @font-face {
-    font-family: 'AGaramondPro';
+    font-family: "AGaramondPro";
     font-style: italic;
-    src:
-        local('AGaramondPro-Italic'),
-
-        url('../font/AGaramondPro-Italic.woff')
-        format('woff'),
-    
-        url('../font/AGaramondPro-Italic.otf')
-        format('truetype');
+    src: local("AGaramondPro-Italic"), url("../font/AGaramondPro-Italic.woff") format("woff"),
+        url("../font/AGaramondPro-Italic.otf") format("truetype");
 }
 @font-face {
-    font-family: 'AGaramondPro';
+    font-family: "AGaramondPro";
     font-style: italic;
     font-weight: bold;
-    src:
-        local('AGaramondPro-BoldItalic'),
-
-        url('../font/AGaramondPro-BoldItalic.woff')
-        format('woff'),
-    
-        url('../font/AGaramondPro-BoldItalic.otf')
-        format('truetype');
+    src: local("AGaramondPro-BoldItalic"), url("../font/AGaramondPro-BoldItalic.woff") format("woff"),
+        url("../font/AGaramondPro-BoldItalic.otf") format("truetype");
 }
 
-:root{
-    --bleu : #18273D ;
-    --beige : #F7F4EC ;
-    --brown : #bfa959;
-    --soustitrecolor :#999 ;
-    --textcolor :#333 ;
-    --hovernavcolor :#333 ;
-    --hoverbuttoncolor :#bfa959 ;
+:root {
+    --bleu: #18273d;
+    --beige: #f7f4ec;
+    --brown: #bfa959;
+    --soustitrecolor: #999;
+    --textcolor: #333;
+    --hovernavcolor: #333;
+    --hoverbuttoncolor: #bfa959;
 }
 
-html{
-    font-family: 'AGaramondPro';
-
-
+html {
+    font-family: "AGaramondPro";
 }
 
-body{
+body {
     width: 100vw;
     margin: 0;
     overflow-x: hidden;
     background-color: var(--hovernavcolor);
-
-
 }
-*{
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scrollbar-color: transparent transparent; /* thumb and track color */
+    scrollbar-width: 0px;
 }
+
+/**** Navigateur ****/
+
+nav {
+    background-color: #18273d;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav ul li a {
+    font-family: "garamond";
+    color: white;
+    transition: 0.3s;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+nav ul li a:hover {
+    color: #bbb6b6;
+}
+
+ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding-right: 50px;
+}
+
+nav ul {
+    display: inline-block;
+}
+
+nav ul li img {
+    width: 50%;
+}
+
+nav header img {
+    width: 70%;
+}
+
+/**** Navigateur ****/
 
 .main {
     display: grid;
@@ -81,7 +106,7 @@ body{
     margin: 1rem 2rem;
     background-color: #fff;
 }
-#dark:checked ~ .main{
+#dark:checked ~ .main {
     color: $unexisting;
     background-color: var(--hovernavcolor);
     color: #fff;
@@ -91,14 +116,14 @@ body{
 
 // .card
 //  .aside
-.header{
+.header {
     margin-top: 2rem;
 }
-article{
+article {
     margin: 2rem 0;
 }
 
-.article__titre{
+.article__titre {
     margin: 1rem 0 1rem 0;
 }
 // .header__title1
