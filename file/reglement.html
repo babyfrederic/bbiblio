@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/brunoScss/reglement.css">
+    <link rel="stylesheet" href="../css/styleBruno.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
-    <input type="radio" name="dev" id="normal" autocomplete="off" style="display: none;">
-    <input type="radio" name="dev" id="dark" autocomplete="off" checked style="display: none;">
+    <input type="radio" name="dev" id="normal" autocomplete="off" checked style="display: none;">
+    <input type="radio" name="dev" id="dark" autocomplete="off" style="display: none;">
     <nav style="width: 100%; background-color: darkblue; color: wheat; padding: 1rem;">
         <div></div>
         <div class="btn-group" data-toggle="buttons">
@@ -43,22 +42,57 @@
         </header>
 
         <main class="reglement__main">
-            <article class="reglement__article" data-c="reglement__article" data-n="10">
-                <h3 class="reglement__article__titre">Article $</h3>
-                <p class="reglement__article__regle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos error
-                    quis commodi excepturi, iusto sunt asperiores nesciunt voluptatum eius, quod nulla praesentium
-                    delectus neque odit distinctio. Rem dolorem unde facere?</p>
+            
+            <article class="reglement__article reglement__article">
+                <h3 class="article__titre">Article 1</h3>
+                <p class="reglement__article__regle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos error quis commodi excepturi, iusto sunt asperiores nesciunt voluptatum eius, quod nulla praesentium delectus neque odit distinctio. Rem dolorem unde facere?</p>
+            </article>
+            <article class="reglement__article reglement__article">
+                <h3 class="article__titre">Article 2</h3>
+                <p class="reglement__article__regle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos error quis commodi excepturi, iusto sunt asperiores nesciunt voluptatum eius, quod nulla praesentium delectus neque odit distinctio. Rem dolorem unde facere?</p>
+            </article>
+            <article class="reglement__article reglement__article">
+                <h3 class="article__titre">Article 3</h3>
+                <p class="reglement__article__regle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos error quis commodi excepturi, iusto sunt asperiores nesciunt voluptatum eius, quod nulla praesentium delectus neque odit distinctio. Rem dolorem unde facere?</p>
+            </article>
+            <article class="reglement__article reglement__article">
+                <h3 class="article__titre">Article 4</h3>
+                <p class="reglement__article__regle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos error quis commodi excepturi, iusto sunt asperiores nesciunt voluptatum eius, quod nulla praesentium delectus neque odit distinctio. Rem dolorem unde facere?</p>
+            </article>
+            <article class="reglement__article reglement__article">
+                <h3 class="article__titre">Article 5</h3>
+                <p class="reglement__article__regle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos error quis commodi excepturi, iusto sunt asperiores nesciunt voluptatum eius, quod nulla praesentium delectus neque odit distinctio. Rem dolorem unde facere?</p>
+            </article>
+            <article class="reglement__article reglement__article">
+                <h3 class="article__titre">Article 6</h3>
+                <p class="reglement__article__regle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos error quis commodi excepturi, iusto sunt asperiores nesciunt voluptatum eius, quod nulla praesentium delectus neque odit distinctio. Rem dolorem unde facere?</p>
+            </article>
+            <article class="reglement__article reglement__article">
+                <h3 class="article__titre">Article 7</h3>
+                <p class="reglement__article__regle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos error quis commodi excepturi, iusto sunt asperiores nesciunt voluptatum eius, quod nulla praesentium delectus neque odit distinctio. Rem dolorem unde facere?</p>
+            </article>
+            <article class="reglement__article reglement__article">
+                <h3 class="article__titre">Article 8</h3>
+                <p class="reglement__article__regle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos error quis commodi excepturi, iusto sunt asperiores nesciunt voluptatum eius, quod nulla praesentium delectus neque odit distinctio. Rem dolorem unde facere?</p>
+            </article>
+            <article class="reglement__article reglement__article">
+                <h3 class="article__titre">Article 9</h3>
+                <p class="reglement__article__regle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos error quis commodi excepturi, iusto sunt asperiores nesciunt voluptatum eius, quod nulla praesentium delectus neque odit distinctio. Rem dolorem unde facere?</p>
+            </article>
+            <article class="reglement__article reglement__article">
+                <h3 class="article__titre">Article 10</h3>
+                <p class="reglement__article__regle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos error quis commodi excepturi, iusto sunt asperiores nesciunt voluptatum eius, quod nulla praesentium delectus neque odit distinctio. Rem dolorem unde facere?</p>
             </article>
         </main>
         <aside class="reglement__aside aside">
-            <button class="aside__toggle__button"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i> Inscrivez-vous</button>
+            <button class="aside__toggle__button button--primary"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i> Inscrivez-vous</button>
             <section class="reglement__aside__inscription auteur card">
                 <h3 class="aside__titre3">Cher auteur</h3>
                 <p class="aside__accroche">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
                     reiciendis.</p>
-                <button class="aside__button">Je participe !</button>
+                <button class="aside__button button--primary">Je participe !</button>
             </section>
-            <section class="reglement__aside__inscription jury carte">
+            <section class="reglement__aside__inscription jury card">
                 <h3 class="aside__titre3">Cher membre du jury</h3>
                 <p class="aside__accroche">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
                     reiciendis.</p>
@@ -68,17 +102,7 @@
     </section>
 </body>
 
-<script>
 
-    const article = (n, className ="") => `
-            <article class="reglement__article ${className}">
-                <h3 class="article__titre">Article ${n}</h3>
-                <p class="reglement__article__regle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos error quis commodi excepturi, iusto sunt asperiores nesciunt voluptatum eius, quod nulla praesentium delectus neque odit distinctio. Rem dolorem unde facere?</p>
-            </article>`
-
-
-</script>
-<script src="../css/brunoScss/generator.js"></script>
 
 
 </html>

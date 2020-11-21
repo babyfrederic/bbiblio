@@ -2,3 +2,285 @@ $unexisting: #fff;
 
 @import "styleBrunomain.scss";
 
+input {
+    display: none;
+}
+
+.filtre__liste,
+.dispo__liste {
+    width: 100%;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    margin: 1rem 0;
+
+    li {
+        list-style-type: none;
+    }
+}
+.filtre__btn--open {
+    font-family: "AGaramondPro";
+    font-weight: bold;
+    font-style: italic;
+}
+// disposition de la liste d'oeuvres
+.oeuvres__container {
+    display: grid;
+    position: relative;
+    gap: 10px;
+    counter-reset: nbarticle;
+    margin-top: 3rem;
+
+    &::after {
+        content: "Nombre d'articles : " counter(nbarticle);
+        position: absolute;
+        display: block;
+        bottom: 100%;
+        width: 100%;
+        text-align: right;
+        right: 0;
+        border-bottom: 2px solid var(--lightboxbackcolor);
+    }
+}
+
+input[name="disposition"]:checked {
+    // label visible
+
+    &#disposition1 ~ {
+        .oeuvres__filtre label[for="disposition1"] {
+            color: var(--hoverbuttoncolor);
+        }
+        .oeuvres__container {
+            grid-template-rows: repeat(auto-fill, auto);
+
+            .oeuvre__titre {
+                line-height: 3rem;
+                padding: 0 1rem;
+            }
+
+            .oeuvre__article:nth-of-type(2n) .oeuvre__titre::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 3.25rem;
+                background-color: var(--lightboxbackcolor);
+            }
+        }
+    }
+    &#disposition2 ~ {
+        .oeuvres__filtre label[for="disposition2"] {
+            color: var(--hoverbuttoncolor);
+        }
+        .oeuvres__container {
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+
+            .oeuvre {
+                &__header {
+                    display: none;
+                }
+                &__main {
+                    display: block;
+                    .oeuvre__desc {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// article
+.oeuvre {
+    &__article {
+        margin: 0;
+  
+        &::after {
+            content: "";
+            counter-increment: nbarticle;
+        }
+        > :not(header) {
+            display: none;
+        }
+
+        // le focus-within ouvrant
+
+        &:focus-within {
+            position: fixed;
+            z-index: 1;
+            background-color: var(--cardcolor);
+            left: 0;
+            bottom: 0;
+            width: 75%;
+            height: 85vh;
+            max-width: 400px;
+            padding: 1rem;
+            display: grid;
+            grid-template-rows: 1fr 3rem;
+            gap: 1rem;
+            .oeuvre {
+            &__header {
+                height: 0;
+                overflow: hidden;
+                order: 1
+            }
+                &__main > button {
+                    position: relative;
+                }
+                &__cover{
+                    overflow: hidden;
+                    img{
+                        max-height: 64vh;
+                    }
+                }
+                &__desc {
+                    display: block !important;
+                    color: var(--textcolor);
+                    height: 2rem;
+                    // font-family: var(--fontfamily);
+                    font-size: 1rem;
+                    background-color: var(--cardcolor);
+                    overflow: hidden;
+                    position: absolute;
+                    padding: 0 1rem;
+                    bottom: -2rem;
+                    transition: 0.5s ease-in;
+                    &:hover {
+                        padding: 1rem;
+                        overflow: auto;
+                        height: 15rem;
+                    }
+                }
+            }
+
+            footer {
+                display: flex;
+                justify-content: space-evenly;
+
+                label{
+                    display: inline-block;
+                    width: calc(100% + 16px);
+                    height: 100%;
+                    margin: 0 -8px;
+                    line-height: 3rem;
+                    font-size: x-large;
+                }
+            }
+
+            > * {
+                display: block;
+            }
+            &::before {
+                content: "";
+                z-index: -1;
+                display: block;
+                position: fixed;
+                background-color: var(--lightboxbackcolor);
+                top: 50%;
+                left: 0;
+                width: 200vw;
+                height: 100vh;
+                transform: translateY(-50%);
+            }
+            animation: leftcoming 0.5s ease-out;
+
+            @keyframes leftcoming {
+                0% {
+                    left: -25%;
+                    opacity: 0;
+                }
+                100% {
+                    left: 0;
+                    opacity: 1;
+                }
+            }
+            // le focus-within fermant
+        }
+    }
+    &__cover {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+input[name="droit"]:checked {
+    // label visible
+
+    &#droitpublic ~ {
+        .navdev label[for="droitpublic"] {
+            color: var(--hoverbuttoncolor);
+        }
+
+        * .jury,
+        * .admin {
+            display: none;
+        }
+    }
+    &#droitjury ~ {
+        .navdev label[for="droitjury"] {
+            color: var(--hoverbuttoncolor);
+        }
+        * .admin,
+        * .jury--none {
+            display: none;
+        }
+    }
+    &#droitadmin ~ {
+        .navdev label[for="droitadmin"] {
+            color: var(--hoverbuttoncolor);
+        }
+        * .jury {
+            display: none;
+        }
+    }
+}
+// .btn__favoris
+
+// .btn__note
+input#favoris:checked ~ {
+    .oeuvres__filtre label[for="favoris"] {
+        color: var(--hoverbuttoncolor);
+    }
+    .oeuvres__container input:not(:checked) + .oeuvre__article {
+        display: none;
+    }
+}
+
+// gestion des filtres
+input[name="categorie"]:checked {
+    // label visible
+    &#all ~ {
+        .oeuvres__filtre label[for="all"] {
+            color: var(--hoverbuttoncolor);
+        }
+    }
+    &#note ~ {
+        .oeuvres__filtre label[for="note"] {
+            color: var(--hoverbuttoncolor);
+        }
+    }
+    @for $cat_nb from 0 to 6 {
+        &#catfilter#{$cat_nb} ~ {
+            .oeuvres__filtre {
+                .li__filter__cat:not(.filter__cat--#{$cat_nb}) {
+                    display: none;
+                }
+                label[for="catfilter#{$cat_nb}"] {
+                    color: var(--hoverbuttoncolor);
+                }
+                &:focus-within {
+                    .li__filter__cat:not(.filter__cat--#{$cat_nb}) {
+                        display: block;
+                    }
+                }
+            }
+            @if $cat_nb != 0 {
+                .oeuvres__container .oeuvre__article:not(.categorie#{$cat_nb}) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

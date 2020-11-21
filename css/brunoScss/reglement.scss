@@ -3,7 +3,6 @@ $unexisting: #fff;
 
 @import "styleBrunomain.scss";
 
-
 .header {
     &__title1 {
         text-align: center;
@@ -20,10 +19,9 @@ $unexisting: #fff;
     &__aside { 
         position: fixed;
         transition: 0.5s ease;
-        width: 90%;
-        max-width: 350px;
+        width: 350px;
         top: 15%;
-        right: 0;
+        right: 0.5rem;
         transform: translateX(100%);
         padding-right: 1.5rem;
 
@@ -53,6 +51,9 @@ $unexisting: #fff;
         transition: 0.5s ease;
         right: 100%;
         top: 40%;
+        border-radius: 10px;
+        border-bottom-right-radius: unset;
+        border-bottom-left-radius: unset;
         
         i{
             transition: 0.5s ease;
