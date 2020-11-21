@@ -5,32 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/styleNaim.css">
-
-    <link rel="stylesheet" href="../css/brunoScss/oeuvres.css">
-
+    <link rel="stylesheet" href="../css/styleBruno.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+    <input type="radio" name="droit" id="droitpublic" autocomplete="off" checked>
+    <input type="radio" name="droit" id="droitadmin" autocomplete="off">
+    <input type="radio" name="droit" id="droitjury" autocomplete="off">
     <input type="radio" name="dev" id="normal" autocomplete="off" style="display: none;">
     <input type="radio" name="dev" id="dark" autocomplete="off" checked style="display: none;">
-    <nav style="width: 100%; background-color: darkblue; color: wheat; padding: 1rem;">
+    <nav id="top" class="navdev"
+        style="z-index: 1; width: 100%; background-color: darkblue; color: wheat; padding: 1rem;">
+        <div style="margin: 0.5rem;"><a href="#top"> DEV NAV :</a></div>
         <div>
-            <label for="public">Public</label>
-            <label for="public">Admin</label>
-            <label for="public">Jury</label>
+            <label for="droitpublic">Public</label>
+            <label for="droitadmin">Admin</label>
+            <label for="droitjury">Jury</label>
         </div>
         <div class="btn-group" data-toggle="buttons">
             <label class="btn btn-primary active" for="normal">
-                normal
+                light-mode
             </label>
             <label class="btn btn-primary" for="dark">
                 dark-mode
             </label>
         </div>
     </nav>
-    <nav>
+    <!-- <nav>
         <header>
             <img src="../image/logo.png" alt="">
         </header>
@@ -41,93 +43,695 @@
             <li><a href="apropos.html">A propos</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="inscription.html">Inscription/Connexion</a></li>
-            <li><a href="#"><img src="./image/search.png" alt=""></a></li>
+            <li><a href="#"><img src="../image/search.png" alt=""></a></li>
         </ul>
-    </nav>
+    </nav> -->
     <section id="oeuvres" class="main oeuvres">
         <header class="oeuvre__header header">
             <h1 class="oeuvre__header__title1 header__title1">Les oeuvres</h1>
         </header>
 
-        <main class="oeuvres__main">
-            <section id="oeuvres">
-                <input type="radio" name="categorie" id="all" checked>
-                <!-- fermer le popup -->
-                <!-- input[type=radio]#categorie$[name=categorie]*5 -->
-                <input type="radio" id="categorie1" name="categorie">
-                <input type="radio" id="categorie2" name="categorie">
-                <input type="radio" id="categorie3" name="categorie">
-                <input type="radio" id="categorie4" name="categorie">
-                <input type="radio" id="categorie5" name="categorie">
-                <input type="checkbox" id="favoris" name="favoris">
-                <input type="checkbox" id="note" name="note">
-                <header class="entete">
-                    <button> Filtre :</button>
-                    <ul>
-                        <li>
-                            <label for="all">Favoris</label>
-                        </li>
-                        <li>
-                            <label for="all">Tous</label>
-                        </li>
-                        <li>
-                            <label for="categorie1">Categorie 1</label>
-                        </li>
-                        <li>
-                            <label for="categorie2">Categorie 2</label>
-                        </li>
-                        <li>
-                            <label for="categorie3">Categorie 3</label>
-                        </li>
-                        <li>
-                            <label for="categorie4">Categorie 4</label>
-                        </li>
-                        <li>
-                            <label for="categorie5">Categorie 5</label>
-                        </li>
-                    </ul>
-                </header>
-                <!-- case de description produit -->
-                <main class="oeuvres__container">
-                    <article id="oeuvre1" class="oeuvre__article categorie1 article1">
-                        <input type="checkbox" name="favori" id="favoriN">
-                        <header class="oeuvre__header">
-                            <button class="oeuvre__header__button">
-                                <h3 class="oeuvre__titre">beta test</h3>
-                            </button>
-                        </header>
-                        <main class="oeuvre__main">
-                            <picture>
-                                <img src="../image/logo.png" alt="">
-                            </picture>
-                            <p class="oeuvre__desc">
-                                oeuvre__article categorie1 article DESCRIPTION ipsum dolor, sit amet consectetur adipisicing elit. Non unde quos aspernatur ex
-                                quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
-                            </p>
-                        </main>
-                        <footer class="oeuvre__footer">
-                            <button class="pdf_loading button--primary">Telecharger</button>
-                            <section class="jury jury__note">
-                                <button class="pdf_loading button--primary">Noter</button>
-                                <ul>
-                                    li>p
-                                </ul>
-                            </section>
-                        </footer>
-                    </article>
-                    <article data-c="oeuvre__article categorie1 article" data-n="10">
-                        
-                    </article>
-                    <article data-c="oeuvre__article categorie2 article" data-n="5">
-                        
-                    </article>
-                    <article data-c="oeuvre__article categorie3 article" data-n="12">
-                        
-                    </article>
-                </main>
+        <main class="oeuvres__container">
 
-            </section>
+            <!-- li>p{critere*}+section.inputs>label*8{critère $}>input:radio[name=unadix][id=unadix$]*10^textarea.jury__note[value=note][name=note]+textarea.jury__avis -->
+
+
+            <input type="checkbox" id="cat1__BD1" class="categorie1 cat1__BD1">
+            <article class="oeuvre__article categorie1 cat1__BD">
+                <header class="oeuvre__header">
+                    <button class="oeuvre__header__button">
+                        <h3 class="oeuvre__titre">marine1 categorie1 cat1__BDe</h3>
+                    </button>
+                </header>
+                <main class="oeuvre__main">
+                    <button>
+                        <picture class="oeuvre__cover">
+                            <img src="../image/sl0.jpg" alt="cover">
+                        </picture>
+                        <p class="oeuvre__desc">
+                            cat1__BD1 article DESCRIPTION ipsum dolor, sit amet consectetur
+                            adipisicing elit. Non unde quos aspernatur ex
+                            quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
+                        </p>
+                    </button>
+                </main>
+                <footer class="oeuvre__footer">
+                    <button class="pdf_loading button--primary">
+                        <label for="cat1__BD1">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </label>
+                    </button>
+                    <button class="pdf_loading button--primary jury">Telecharger</button>
+                    <section class="jury jury__note">
+                        <button class="pdf_loading button--primary">Noter</button>
+
+                    </section>
+                </footer>
+            </article>
+            <input type="checkbox" id="cat1__BD2" class="categorie1 cat1__BD2">
+            <article class="oeuvre__article categorie1 cat1__BD">
+                <header class="oeuvre__header">
+                    <button class="oeuvre__header__button">
+                        <h3 class="oeuvre__titre">marine2 categorie1 cat1__BDe</h3>
+                    </button>
+                </header>
+                <main class="oeuvre__main">
+                    <button>
+                        <picture class="oeuvre__cover">
+                            <img src="../image/sl1.jpg" alt="cover">
+                        </picture>
+                        <p class="oeuvre__desc">
+                            cat1__BD2 article DESCRIPTION ipsum dolor, sit amet consectetur
+                            adipisicing elit. Non unde quos aspernatur ex
+                            quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
+                        </p>
+                    </button>
+                </main>
+                <footer class="oeuvre__footer">
+                    <button class="pdf_loading button--primary">
+                        <label for="cat1__BD2">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </label>
+                    </button>
+                    <button class="pdf_loading button--primary jury">Telecharger</button>
+                    <section class="jury jury__note">
+                        <button class="pdf_loading button--primary">Noter</button>
+
+                    </section>
+                </footer>
+            </article>
+            <input type="checkbox" id="cat1__BD3" class="categorie1 cat1__BD3">
+            <article class="oeuvre__article categorie1 cat1__BD">
+                <header class="oeuvre__header">
+                    <button class="oeuvre__header__button">
+                        <h3 class="oeuvre__titre">marine3 categorie1 cat1__BDe</h3>
+                    </button>
+                </header>
+                <main class="oeuvre__main">
+                    <button>
+                        <picture class="oeuvre__cover">
+                            <img src="../image/sl2.jpg" alt="cover">
+                        </picture>
+                        <p class="oeuvre__desc">
+                            cat1__BD3 article DESCRIPTION ipsum dolor, sit amet consectetur
+                            adipisicing elit. Non unde quos aspernatur ex
+                            quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
+                        </p>
+                    </button>
+                </main>
+                <footer class="oeuvre__footer">
+                    <button class="pdf_loading button--primary">
+                        <label for="cat1__BD3">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </label>
+                    </button>
+                    <button class="pdf_loading button--primary jury">Telecharger</button>
+                    <section class="jury jury__note">
+                        <button class="pdf_loading button--primary">Noter</button>
+
+                    </section>
+                </footer>
+            </article>
+            <input type="checkbox" id="cat1__BD4" class="categorie1 cat1__BD4">
+            <article class="oeuvre__article categorie1 cat1__BD">
+                <header class="oeuvre__header">
+                    <button class="oeuvre__header__button">
+                        <h3 class="oeuvre__titre">marine4 categorie1 cat1__BDe</h3>
+                    </button>
+                </header>
+                <main class="oeuvre__main">
+                    <button>
+                        <picture class="oeuvre__cover">
+                            <img src="../image/sl3.jpg" alt="cover">
+                        </picture>
+                        <p class="oeuvre__desc">
+                            cat1__BD4 article DESCRIPTION ipsum dolor, sit amet consectetur
+                            adipisicing elit. Non unde quos aspernatur ex
+                            quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
+                        </p>
+                    </button>
+                </main>
+                <footer class="oeuvre__footer">
+                    <button class="pdf_loading button--primary">
+                        <label for="cat1__BD4">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </label>
+                    </button>
+                    <button class="pdf_loading button--primary jury">Telecharger</button>
+                    <section class="jury jury__note">
+                        <button class="pdf_loading button--primary">Noter</button>
+
+                    </section>
+                </footer>
+            </article>
+            <input type="checkbox" id="cat1__BD5" class="categorie1 cat1__BD5">
+            <article class="oeuvre__article categorie1 cat1__BD">
+                <header class="oeuvre__header">
+                    <button class="oeuvre__header__button">
+                        <h3 class="oeuvre__titre">marine5 categorie1 cat1__BDe</h3>
+                    </button>
+                </header>
+                <main class="oeuvre__main">
+                    <button>
+                        <picture class="oeuvre__cover">
+                            <img src="../image/sl4.jpg" alt="cover">
+                        </picture>
+                        <p class="oeuvre__desc">
+                            cat1__BD5 article DESCRIPTION ipsum dolor, sit amet consectetur
+                            adipisicing elit. Non unde quos aspernatur ex
+                            quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
+                        </p>
+                    </button>
+                </main>
+                <footer class="oeuvre__footer">
+                    <button class="pdf_loading button--primary">
+                        <label for="cat1__BD5">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </label>
+                    </button>
+                    <button class="pdf_loading button--primary jury">Telecharger</button>
+                    <section class="jury jury__note">
+                        <button class="pdf_loading button--primary">Noter</button>
+
+                    </section>
+                </footer>
+            </article>
+            <input type="checkbox" id="cat1__BD6" class="categorie1 cat1__BD6">
+            <article class="oeuvre__article categorie1 cat1__BD">
+                <header class="oeuvre__header">
+                    <button class="oeuvre__header__button">
+                        <h3 class="oeuvre__titre">marine6 categorie1 cat1__BDe</h3>
+                    </button>
+                </header>
+                <main class="oeuvre__main">
+                    <button>
+                        <picture class="oeuvre__cover">
+                            <img src="../image/sl5.jpg" alt="cover">
+                        </picture>
+                        <p class="oeuvre__desc">
+                            cat1__BD6 article DESCRIPTION ipsum dolor, sit amet consectetur
+                            adipisicing elit. Non unde quos aspernatur ex
+                            quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
+                        </p>
+                    </button>
+                </main>
+                <footer class="oeuvre__footer">
+                    <button class="pdf_loading button--primary">
+                        <label for="cat1__BD6">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </label>
+                    </button>
+                    <button class="pdf_loading button--primary jury">Telecharger</button>
+                    <section class="jury jury__note">
+                        <button class="pdf_loading button--primary">Noter</button>
+
+                    </section>
+                </footer>
+            </article>
+            <input type="checkbox" id="cat1__BD7" class="categorie1 cat1__BD7">
+            <article class="oeuvre__article categorie1 cat1__BD">
+                <header class="oeuvre__header">
+                    <button class="oeuvre__header__button">
+                        <h3 class="oeuvre__titre">marine7 categorie1 cat1__BDe</h3>
+                    </button>
+                </header>
+                <main class="oeuvre__main">
+                    <button>
+                        <picture class="oeuvre__cover">
+                            <img src="../image/sl6.jpg" alt="cover">
+                        </picture>
+                        <p class="oeuvre__desc">
+                            cat1__BD7 article DESCRIPTION ipsum dolor, sit amet consectetur
+                            adipisicing elit. Non unde quos aspernatur ex
+                            quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
+                        </p>
+                    </button>
+                </main>
+                <footer class="oeuvre__footer">
+                    <button class="pdf_loading button--primary">
+                        <label for="cat1__BD7">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </label>
+                    </button>
+                    <button class="pdf_loading button--primary jury">Telecharger</button>
+                    <section class="jury jury__note">
+                        <button class="pdf_loading button--primary">Noter</button>
+
+                    </section>
+                </footer>
+            </article>
+            <input type="checkbox" id="cat1__BD8" class="categorie1 cat1__BD8">
+            <article class="oeuvre__article categorie1 cat1__BD">
+                <header class="oeuvre__header">
+                    <button class="oeuvre__header__button">
+                        <h3 class="oeuvre__titre">marine8 categorie1 cat1__BDe</h3>
+                    </button>
+                </header>
+                <main class="oeuvre__main">
+                    <button>
+                        <picture class="oeuvre__cover">
+                            <img src="../image/sl7.jpg" alt="cover">
+                        </picture>
+                        <p class="oeuvre__desc">
+                            cat1__BD8 article DESCRIPTION ipsum dolor, sit amet consectetur
+                            adipisicing elit. Non unde quos aspernatur ex
+                            quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
+                        </p>
+                    </button>
+                </main>
+                <footer class="oeuvre__footer">
+                    <button class="pdf_loading button--primary">
+                        <label for="cat1__BD8">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </label>
+                    </button>
+                    <button class="pdf_loading button--primary jury">Telecharger</button>
+                    <section class="jury jury__note">
+                        <button class="pdf_loading button--primary">Noter</button>
+
+                    </section>
+                </footer>
+            </article>
+            <input type="checkbox" id="cat1__BD9" class="categorie1 cat1__BD9">
+            <article class="oeuvre__article categorie1 cat1__BD">
+                <header class="oeuvre__header">
+                    <button class="oeuvre__header__button">
+                        <h3 class="oeuvre__titre">marine9 categorie1 cat1__BDe</h3>
+                    </button>
+                </header>
+                <main class="oeuvre__main">
+                    <button>
+                        <picture class="oeuvre__cover">
+                            <img src="../image/sl8.jpg" alt="cover">
+                        </picture>
+                        <p class="oeuvre__desc">
+                            cat1__BD9 article DESCRIPTION ipsum dolor, sit amet consectetur
+                            adipisicing elit. Non unde quos aspernatur ex
+                            quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
+                        </p>
+                    </button>
+                </main>
+                <footer class="oeuvre__footer">
+                    <button class="pdf_loading button--primary">
+                        <label for="cat1__BD9">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </label>
+                    </button>
+                    <button class="pdf_loading button--primary jury">Telecharger</button>
+                    <section class="jury jury__note">
+                        <button class="pdf_loading button--primary">Noter</button>
+
+                    </section>
+                </footer>
+            </article>
+            <input type="checkbox" id="cat1__BD10" class="categorie1 cat1__BD10">
+            <article class="oeuvre__article categorie1 cat1__BD">
+                <header class="oeuvre__header">
+                    <button class="oeuvre__header__button">
+                        <h3 class="oeuvre__titre">marine10 categorie1 cat1__BDe</h3>
+                    </button>
+                </header>
+                <main class="oeuvre__main">
+                    <button>
+                        <picture class="oeuvre__cover">
+                            <img src="../image/sl9.jpg" alt="cover">
+                        </picture>
+                        <p class="oeuvre__desc">
+                            cat1__BD10 article DESCRIPTION ipsum dolor, sit amet consectetur
+                            adipisicing elit. Non unde quos aspernatur ex
+                            quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
+                        </p>
+                    </button>
+                </main>
+                <footer class="oeuvre__footer">
+                    <button class="pdf_loading button--primary">
+                        <label for="cat1__BD10">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </label>
+                    </button>
+                    <button class="pdf_loading button--primary jury">Telecharger</button>
+                    <section class="jury jury__note">
+                        <button class="pdf_loading button--primary">Noter</button>
+
+                    </section>
+                </footer>
+            </article>
+
+            <input type="checkbox" id="cat2__Roman1" class="categorie2 cat2__Roman1">
+            <article class="oeuvre__article categorie2 cat2__Roman">
+                <header class="oeuvre__header">
+                    <button class="oeuvre__header__button">
+                        <h3 class="oeuvre__titre">marine1 categorie2 cat2__Romane</h3>
+                    </button>
+                </header>
+                <main class="oeuvre__main">
+                    <button>
+                        <picture class="oeuvre__cover">
+                            <img src="../image/sl0.jpg" alt="cover">
+                        </picture>
+                        <p class="oeuvre__desc">
+                            cat2__Roman1 article DESCRIPTION ipsum dolor, sit amet consectetur
+                            adipisicing elit. Non unde quos aspernatur ex
+                            quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
+                        </p>
+                    </button>
+                </main>
+                <footer class="oeuvre__footer">
+                    <button class="pdf_loading button--primary">
+                        <label for="cat2__Roman1">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </label>
+                    </button>
+                    <button class="pdf_loading button--primary jury">Telecharger</button>
+                    <section class="jury jury__note">
+                        <button class="pdf_loading button--primary">Noter</button>
+
+                    </section>
+                </footer>
+            </article>
+            <input type="checkbox" id="cat2__Roman2" class="categorie2 cat2__Roman2">
+            <article class="oeuvre__article categorie2 cat2__Roman">
+                <header class="oeuvre__header">
+                    <button class="oeuvre__header__button">
+                        <h3 class="oeuvre__titre">marine2 categorie2 cat2__Romane</h3>
+                    </button>
+                </header>
+                <main class="oeuvre__main">
+                    <button>
+                        <picture class="oeuvre__cover">
+                            <img src="../image/sl1.jpg" alt="cover">
+                        </picture>
+                        <p class="oeuvre__desc">
+                            cat2__Roman2 article DESCRIPTION ipsum dolor, sit amet consectetur
+                            adipisicing elit. Non unde quos aspernatur ex
+                            quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
+                        </p>
+                    </button>
+                </main>
+                <footer class="oeuvre__footer">
+                    <button class="pdf_loading button--primary">
+                        <label for="cat2__Roman2">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </label>
+                    </button>
+                    <button class="pdf_loading button--primary jury">Telecharger</button>
+                    <section class="jury jury__note">
+                        <button class="pdf_loading button--primary">Noter</button>
+
+                    </section>
+                </footer>
+            </article>
+            <input type="checkbox" id="cat2__Roman3" class="categorie2 cat2__Roman3">
+            <article class="oeuvre__article categorie2 cat2__Roman">
+                <header class="oeuvre__header">
+                    <button class="oeuvre__header__button">
+                        <h3 class="oeuvre__titre">marine3 categorie2 cat2__Romane</h3>
+                    </button>
+                </header>
+                <main class="oeuvre__main">
+                    <button>
+                        <picture class="oeuvre__cover">
+                            <img src="../image/sl2.jpg" alt="cover">
+                        </picture>
+                        <p class="oeuvre__desc">
+                            cat2__Roman3 article DESCRIPTION ipsum dolor, sit amet consectetur
+                            adipisicing elit. Non unde quos aspernatur ex
+                            quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
+                        </p>
+                    </button>
+                </main>
+                <footer class="oeuvre__footer">
+                    <button class="pdf_loading button--primary">
+                        <label for="cat2__Roman3">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </label>
+                    </button>
+                    <button class="pdf_loading button--primary jury">Telecharger</button>
+                    <section class="jury jury__note">
+                        <button class="pdf_loading button--primary">Noter</button>
+
+                    </section>
+                </footer>
+            </article>
+            <input type="checkbox" id="cat2__Roman4" class="categorie2 cat2__Roman4">
+            <article class="oeuvre__article categorie2 cat2__Roman">
+                <header class="oeuvre__header">
+                    <button class="oeuvre__header__button">
+                        <h3 class="oeuvre__titre">marine4 categorie2 cat2__Romane</h3>
+                    </button>
+                </header>
+                <main class="oeuvre__main">
+                    <button>
+                        <picture class="oeuvre__cover">
+                            <img src="../image/sl3.jpg" alt="cover">
+                        </picture>
+                        <p class="oeuvre__desc">
+                            cat2__Roman4 article DESCRIPTION ipsum dolor, sit amet consectetur
+                            adipisicing elit. Non unde quos aspernatur ex
+                            quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
+                        </p>
+                    </button>
+                </main>
+                <footer class="oeuvre__footer">
+                    <button class="pdf_loading button--primary">
+                        <label for="cat2__Roman4">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </label>
+                    </button>
+                    <button class="pdf_loading button--primary jury">Telecharger</button>
+                    <section class="jury jury__note">
+                        <button class="pdf_loading button--primary">Noter</button>
+
+                    </section>
+                </footer>
+            </article>
+            <input type="checkbox" id="cat2__Roman5" class="categorie2 cat2__Roman5">
+            <article class="oeuvre__article categorie2 cat2__Roman">
+                <header class="oeuvre__header">
+                    <button class="oeuvre__header__button">
+                        <h3 class="oeuvre__titre">marine5 categorie2 cat2__Romane</h3>
+                    </button>
+                </header>
+                <main class="oeuvre__main">
+                    <button>
+                        <picture class="oeuvre__cover">
+                            <img src="../image/sl4.jpg" alt="cover">
+                        </picture>
+                        <p class="oeuvre__desc">
+                            cat2__Roman5 article DESCRIPTION ipsum dolor, sit amet consectetur
+                            adipisicing elit. Non unde quos aspernatur ex
+                            quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
+                        </p>
+                    </button>
+                </main>
+                <footer class="oeuvre__footer">
+                    <button class="pdf_loading button--primary">
+                        <label for="cat2__Roman5">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </label>
+                    </button>
+                    <button class="pdf_loading button--primary jury">Telecharger</button>
+                    <section class="jury jury__note">
+                        <button class="pdf_loading button--primary">Noter</button>
+
+                    </section>
+                </footer>
+            </article>
+
+            <input type="checkbox" id="cat3__Chaud1" class="categorie3 cat3__Chaud1">
+            <article class="oeuvre__article categorie3 cat3__Chaud">
+                <header class="oeuvre__header">
+                    <button class="oeuvre__header__button">
+                        <h3 class="oeuvre__titre">marine1 categorie3 cat3__Chaude</h3>
+                    </button>
+                </header>
+                <main class="oeuvre__main">
+                    <button>
+                        <picture class="oeuvre__cover">
+                            <img src="../image/sl0.jpg" alt="cover">
+                        </picture>
+                        <p class="oeuvre__desc">
+                            cat3__Chaud1 article DESCRIPTION ipsum dolor, sit amet consectetur
+                            adipisicing elit. Non unde quos aspernatur ex
+                            quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
+                        </p>
+                    </button>
+                </main>
+                <footer class="oeuvre__footer">
+                    <button class="pdf_loading button--primary">
+                        <label for="cat3__Chaud1">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </label>
+                    </button>
+                    <button class="pdf_loading button--primary jury">Telecharger</button>
+                    <section class="jury jury__note">
+                        <button class="pdf_loading button--primary">Noter</button>
+
+                    </section>
+                </footer>
+            </article>
+            <input type="checkbox" id="cat3__Chaud2" class="categorie3 cat3__Chaud2">
+            <article class="oeuvre__article categorie3 cat3__Chaud">
+                <header class="oeuvre__header">
+                    <button class="oeuvre__header__button">
+                        <h3 class="oeuvre__titre">marine2 categorie3 cat3__Chaude</h3>
+                    </button>
+                </header>
+                <main class="oeuvre__main">
+                    <button>
+                        <picture class="oeuvre__cover">
+                            <img src="../image/sl1.jpg" alt="cover">
+                        </picture>
+                        <p class="oeuvre__desc">
+                            cat3__Chaud2 article DESCRIPTION ipsum dolor, sit amet consectetur
+                            adipisicing elit. Non unde quos aspernatur ex
+                            quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
+                        </p>
+                    </button>
+                </main>
+                <footer class="oeuvre__footer">
+                    <button class="pdf_loading button--primary">
+                        <label for="cat3__Chaud2">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </label>
+                    </button>
+                    <button class="pdf_loading button--primary jury">Telecharger</button>
+                    <section class="jury jury__note">
+                        <button class="pdf_loading button--primary">Noter</button>
+
+                    </section>
+                </footer>
+            </article>
+            <input type="checkbox" id="cat3__Chaud3" class="categorie3 cat3__Chaud3">
+            <article class="oeuvre__article categorie3 cat3__Chaud">
+                <header class="oeuvre__header">
+                    <button class="oeuvre__header__button">
+                        <h3 class="oeuvre__titre">marine3 categorie3 cat3__Chaude</h3>
+                    </button>
+                </header>
+                <main class="oeuvre__main">
+                    <button>
+                        <picture class="oeuvre__cover">
+                            <img src="../image/sl2.jpg" alt="cover">
+                        </picture>
+                        <p class="oeuvre__desc">
+                            cat3__Chaud3 article DESCRIPTION ipsum dolor, sit amet consectetur
+                            adipisicing elit. Non unde quos aspernatur ex
+                            quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
+                        </p>
+                    </button>
+                </main>
+                <footer class="oeuvre__footer">
+                    <button class="pdf_loading button--primary">
+                        <label for="cat3__Chaud3">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </label>
+                    </button>
+                    <button class="pdf_loading button--primary jury">Telecharger</button>
+                    <section class="jury jury__note">
+                        <button class="pdf_loading button--primary">Noter</button>
+
+                    </section>
+                </footer>
+            </article>
+            <input type="checkbox" id="cat3__Chaud4" class="categorie3 cat3__Chaud4">
+            <article class="oeuvre__article categorie3 cat3__Chaud">
+                <header class="oeuvre__header">
+                    <button class="oeuvre__header__button">
+                        <h3 class="oeuvre__titre">marine4 categorie3 cat3__Chaude</h3>
+                    </button>
+                </header>
+                <main class="oeuvre__main">
+                    <button>
+                        <picture class="oeuvre__cover">
+                            <img src="../image/sl3.jpg" alt="cover">
+                        </picture>
+                        <p class="oeuvre__desc">
+                            cat3__Chaud4 article DESCRIPTION ipsum dolor, sit amet consectetur
+                            adipisicing elit. Non unde quos aspernatur ex
+                            quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
+                        </p>
+                    </button>
+                </main>
+                <footer class="oeuvre__footer">
+                    <button class="pdf_loading button--primary">
+                        <label for="cat3__Chaud4">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </label>
+                    </button>
+                    <button class="pdf_loading button--primary jury">Telecharger</button>
+                    <section class="jury jury__note">
+                        <button class="pdf_loading button--primary">Noter</button>
+
+                    </section>
+                </footer>
+            </article>
+            <input type="checkbox" id="cat3__Chaud5" class="categorie3 cat3__Chaud5">
+            <article class="oeuvre__article categorie3 cat3__Chaud">
+                <header class="oeuvre__header">
+                    <button class="oeuvre__header__button">
+                        <h3 class="oeuvre__titre">marine5 categorie3 cat3__Chaude</h3>
+                    </button>
+                </header>
+                <main class="oeuvre__main">
+                    <button>
+                        <picture class="oeuvre__cover">
+                            <img src="../image/sl4.jpg" alt="cover">
+                        </picture>
+                        <p class="oeuvre__desc">
+                            cat3__Chaud5 article DESCRIPTION ipsum dolor, sit amet consectetur
+                            adipisicing elit. Non unde quos aspernatur ex
+                            quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
+                        </p>
+                    </button>
+                </main>
+                <footer class="oeuvre__footer">
+                    <button class="pdf_loading button--primary">
+                        <label for="cat3__Chaud5">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </label>
+                    </button>
+                    <button class="pdf_loading button--primary jury">Telecharger</button>
+                    <section class="jury jury__note">
+                        <button class="pdf_loading button--primary">Noter</button>
+
+                    </section>
+                </footer>
+            </article>
+            <input type="checkbox" id="cat3__Chaud6" class="categorie3 cat3__Chaud6">
+            <article class="oeuvre__article categorie3 cat3__Chaud">
+                <header class="oeuvre__header">
+                    <button class="oeuvre__header__button">
+                        <h3 class="oeuvre__titre">marine6 categorie3 cat3__Chaude</h3>
+                    </button>
+                </header>
+                <main class="oeuvre__main">
+                    <button>
+                        <picture class="oeuvre__cover">
+                            <img src="../image/sl5.jpg" alt="cover">
+                        </picture>
+                        <p class="oeuvre__desc">
+                            cat3__Chaud6 article DESCRIPTION ipsum dolor, sit amet consectetur
+                            adipisicing elit. Non unde quos aspernatur ex
+                            quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
+                        </p>
+                    </button>
+                </main>
+                <footer class="oeuvre__footer">
+                    <button class="pdf_loading button--primary">
+                        <label for="cat3__Chaud6">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </label>
+                    </button>
+                    <button class="pdf_loading button--primary jury">Telecharger</button>
+                    <section class="jury jury__note">
+                        <button class="pdf_loading button--primary">Noter</button>
+
+                    </section>
+                </footer>
+            </article>
         </main>
+
         <aside class="oeuvre__aside aside">
 
         </aside>
@@ -135,32 +739,5 @@
 
 </body>
 
-<script>
-
-    const article = (n,className) =>`
-    <article id="oeuvre${n}" class="${className}${n}" data-c="reglement__article" data-n="10">
-        <input type="checkbox" name="favori" id="favoriN">
-        <header class="oeuvre__header">
-            <button class="oeuvre__header__button">
-                <h3 class="oeuvre__titre">Titre du boucin ${n}</h3>
-            </button>
-        </header>
-        <main class="oeuvre__main">
-            <p class="oeuvre__desc">
-                ${className} DESCRIPTION ipsum dolor, sit amet consectetur adipisicing elit. Non unde quos aspernatur ex
-                quasi tempora, voluptas voluptate explicabo repudiandae necessitatibus.
-            </p>
-        </main>
-        <footer class="oeuvre__footer">
-            <button class="pdf_loading button--primary">Telecharger</button>
-
-            <button class="pdf_loading button--primary">Noter</button>
-        </footer>
-    </article>`
-
-
-
-</script>
-<script src="../css/brunoScss/generator.js"></script>
 
 </html>

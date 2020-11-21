@@ -1,106 +1,196 @@
-@font-face {
-    font-family: 'AGaramondPro';
-    src:
-        local('AGaramondPro-Regular'),
+/* 
+dev :bruno
+biblio inspiration pulitzer
+stylisation des pages oeuvres et réglement
+Des tags
 
-        url('../font/AGaramondPro-Regular.woff')
-        format('woff'),
-    
-        url('../font/AGaramondPro-Regular.otf')
-        format('truetype');
+*/
+
+@font-face {
+    font-family: "AGaramondPro";
+    src: local("AGaramondPro-Regular"), url("../../font/AGaramondPro-Regular.woff") format("woff"),
+        url("../font/AGaramondPro-Regular.otf") format("truetype"),
+        url("../../font/AGaramondPro-Regular.otf") format("truetype");
 }
 @font-face {
-    font-family: 'AGaramondPro';
+    font-family: "AGaramondPro";
     font-style: bold;
-    src:
-        local('AGaramondPro-Bold'),
-
-        url('../font/AGaramondPro-Bold.woff')
-        format('woff'),
-    
-        url('../font/AGaramondPro-Bold.otf')
-        format('truetype');
+    src: local("AGaramondPro-Bold"), url("../../font/AGaramondPro-Bold.woff") format("woff"),
+        url("../font/AGaramondPro-Bold.otf") format("truetype"),
+        url("../../font/AGaramondPro-Bold.otf") format("truetype");
 }
 @font-face {
-    font-family: 'AGaramondPro';
+    font-family: "AGaramondPro";
     font-style: italic;
-    src:
-        local('AGaramondPro-Italic'),
-
-        url('../font/AGaramondPro-Italic.woff')
-        format('woff'),
-    
-        url('../font/AGaramondPro-Italic.otf')
-        format('truetype');
+    src: local("AGaramondPro-Italic"), url("../../font/AGaramondPro-Italic.woff") format("woff"),
+        url("../font/AGaramondPro-Italic.otf") format("truetype"),
+        url("../../font/AGaramondPro-Italic.otf") format("truetype");
 }
 @font-face {
-    font-family: 'AGaramondPro';
+    font-family: "AGaramondPro";
     font-style: italic;
     font-weight: bold;
-    src:
-        local('AGaramondPro-BoldItalic'),
-
-        url('../font/AGaramondPro-BoldItalic.woff')
-        format('woff'),
-    
-        url('../font/AGaramondPro-BoldItalic.otf')
-        format('truetype');
+    src: local("AGaramondPro-BoldItalic"), url("../../font/AGaramondPro-BoldItalic.woff") format("woff"),
+        url("../font/AGaramondPro-BoldItalic.otf") format("truetype"),
+        url("../../font/AGaramondPro-BoldItalic.otf") format("truetype");
 }
 
-:root{
-    --bleu : #18273D ;
-    --beige : #F7F4EC ;
-    --brown : #bfa959;
-    --soustitrecolor :#999 ;
-    --textcolor :#333 ;
-    --hovernavcolor :#333 ;
-    --hoverbuttoncolor :#bfa959 ;
+:root {
+    --bleu: #18273d;
+    --beige: #f7f4ec;
+    --brown: #bfa959;
+    --soustitrecolor: #999;
+    --cardcolor:  #e4d08b;
+    --textcolor: #333;
+    --hovernavcolor: #333;
+    --hoverbuttoncolor: rgb(223, 200, 119);
+    --lightboxbackcolor : rgba(0, 0, 0, 0.493);
+    --fontfamily : "AGaramondPro";
+
+    // --lightboxbackcolor :red;
+}
+#dark:checked ~ .main {
+    color: $unexisting;
+    // background-color: var(--hovernavcolor);
+    background-color: #333;
+    --textcolor: #f7f4ec;
+    --cardcolor:  #665a30;
+
+    --lightboxbackcolor :rgba(255, 255, 255, 0.171);
 }
 
-html{
-    font-family: 'AGaramondPro';
-
-
+html {
+    font-family: "AGaramondPro";
 }
 
-body{
+body {
     width: 100vw;
     margin: 0;
     overflow-x: hidden;
     background-color: var(--hovernavcolor);
-
-
 }
-*{
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scrollbar-color: transparent transparent; /* thumb and track color */
+    scrollbar-width: 0px;
 }
 
-.main {
+/**** Navigateur ****/
+
+nav {
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    background-color: #18273d;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav ul li a {
+    font-family: "garamond";
+    color: white;
+    transition: 0.3s;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+nav ul li a:hover {
+    color: #bbb6b6;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding-right: 50px;
+}
+
+nav ul {
+    display: inline-block;
+}
+
+nav ul li img {
+    width: 50%;
+}
+
+nav header img {
+    width: 70%;
+}
+
+/*  Nav fin  */
+/*  système, management des filtres  */
+
+.d--none{
+    display: none;
+}
+
+/*  système, management des filtres  */
+section.main {
+    position: relative;
     display: grid;
-    justify-content: center;
-    margin: 1rem 2rem;
-    background-color: #fff;
+    justify-content: stretch;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    background-color: var(--beige);
+    max-width: 1000px;
+    transition: 1s ease-in;
 }
-#dark:checked ~ .main{
-    color: $unexisting;
-    background-color: var(--hovernavcolor);
-    color: #fff;
-}
+
 
 // .button--primary
 
 // .card
 //  .aside
-.header{
+.header {
     margin-top: 2rem;
+
+    &__title1{
+        text-align: center;
+    }
 }
-article{
+article {
     margin: 2rem 0;
 }
 
-.article__titre{
+.article__titre {
     margin: 1rem 0 1rem 0;
 }
-// .header__title1
 // .aside
 // .aside__titre
+button{
+    background-color: transparent;
+    border: none;
+    color: inherit;
+
+    &:hover, &:focus{
+        outline: none;
+    }
+}
+
+.btn--primary{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.card{
+    background-color: var(--cardcolor);
+    border-radius: 6px;
+    margin: 1.5rem;
+}
+
+button.button--primary {
+    min-width: 3rem;
+    min-height: 3rem;
+    padding: 0 0.5rem;
+    border-radius: 10rem;
+    background-color: var(--brown);
+
+    &:hover,
+    &:focus {
+        background-color: var(--hoverbuttoncolor);
+        outline: 0;
+        color: var(--soustitrecolor);
+    }
+}
