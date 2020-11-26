@@ -1,0 +1,52 @@
+<html lang="fr">
+    <html>
+    <head>
+        <title>Contact JS</title>
+        <meta charset="utf-8">
+        <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="cours.css">
+        <link rel="stylesheet" href="../js/JScode.js" />
+        <link rel="stylesheet" href="../css/styleForms.css">
+    </head>
+    
+    <body>
+        <nav>
+            <header>
+                <img src="../image/logo.png" alt="">
+            </header>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../file/reglement.html">Règlement</a></li>
+                <li><a href=../file/oeuvre.html>Oeuvres</a></li>
+                <li><a href="../file/apropos.html">A propos</a></li>
+                <li><a href="../file/Contact.html">Contact</a></li>
+                <li><a href="../file/connexion.html">Inscription/Connexion</a></li>
+                <li><a href="../file/FormAuteur.html">Connexion Auteur</a></li>
+                <li><a href="../file/FormJury.html">Connexion Jury</a></li>
+                <li><a href="../file/FormEditeur.html">Connexion Editeur</a></li>
+                <li><a href="#"><img src="/image/search.png" alt=""></a></li>
+            </ul>
+        </nav>
+        
+        <div class="boxone">
+            <h1>Contact principal</h1>
+            <button id='b1'> Ajouter un Contact </button>
+            <button onclick="(function(){
+                let para = document.createElement('p');
+                para.textContent = 'Article Ajouté';
+                document.body.appendChild(para);
+            })();">
+                validation : Ajout de l'article 
+            </button>
+            <button id='b2'>Ajouter un paragraphe</button>
+            <button onclick="(function(){
+                let para = document.createElement('p');
+                para.textContent = 'Paragraphe Ajouté';
+                document.body.appendChild(para);
+            })();">
+                Validation : Ajout de paragraphe
+            </button>
+        </div>
+    </body>
+</html>

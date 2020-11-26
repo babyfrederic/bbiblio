@@ -24,6 +24,7 @@
           }else{
             para.style.display = 'block';
           }
+        }
       });
     </script>
     <title>FormAuteur</title>
@@ -40,12 +41,16 @@
             <li><a href="../file/apropos.html">A propos</a></li>
             <li><a href="../file/Contact.html">Contact</a></li>
             <li><a href="../file/connexion.html">Inscription/Connexion</a></li>
+            <li><a href="../file/FormAuteur.html">Connexion Auteur</a></li>
+            <li><a href="../file/FormJury.html">Connexion Jury</a></li>
+            <li><a href="../file/FormEditeur.html">Connexion Editeur</a></li>
             <li><a href="#"><img src="/image/search.png" alt=""></a></li>
         </ul>
     </nav>
     <div class="wrapper">
         <div class="boxone"><img src="../image/Auteur.png" alt=""> </div>
         <div class="boxtwo"><img src="../image/Article.png" alt=""> </div>
+
         <button class="b_button"> Je Valide mon Article !</button>
         <button onclick="(function(){
             let para = document.createElement('p');
@@ -54,6 +59,7 @@
         })();">
             Ajout de l'article validé
         </button>
+
         <button id='button'>J'annule mon formulaire !</button>
         <button onclick="(function(){
             let para = document.createElement('p');
