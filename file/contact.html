@@ -25,28 +25,39 @@
                 <li><a href="../file/FormAuteur.html">Connexion Auteur</a></li>
                 <li><a href="../file/FormJury.html">Connexion Jury</a></li>
                 <li><a href="../file/FormEditeur.html">Connexion Editeur</a></li>
-                <li><a href="#"><img src="/image/search.png" alt=""></a></li>
+                <li><a href="#"><img src="../image/search.png" alt=""></a></li>
             </ul>
         </nav>
         
         <div class="boxone">
-            <h1>Contact principal</h1>
-            <button id='b1'> Ajouter un Contact </button>
+            <h1> Contact principal</h1>
+            <div>
+                <button 
+                    onclick="(function(){
+                    let para = document.createElement('p');
+                    para.textContent = 'Contact Ajouté';
+                    document.body.appendChild(para);
+                    })();"> 
+                    Ajoutons un Contact
+                </button>
+                </br>
             <button onclick="(function(){
                 let para = document.createElement('p');
                 para.textContent = 'Article Ajouté';
                 document.body.appendChild(para);
-            })();">
+                })();">
                 validation : Ajout de l'article 
             </button>
-            <button id='b2'>Ajouter un paragraphe</button>
-            <button onclick="(function(){
+            </div>
+            <div>
+            <button  id='b2' onclick="(function(){
                 let para = document.createElement('p');
                 para.textContent = 'Paragraphe Ajouté';
                 document.body.appendChild(para);
             })();">
-                Validation : Ajout de paragraphe
+                Valider : Ajout de paragraphe
             </button>
+        </div>
         </div>
     </body>
 </html>

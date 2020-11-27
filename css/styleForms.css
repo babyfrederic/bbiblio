@@ -192,10 +192,12 @@ nav header img{
   grid-auto-rows: minmax(100px, auto);
 }
 .boxone{
+  display: grid;
   grid-column: 3/ 4;
   grid-row: 1 / 5;
 }
 .boxtwo{
+  display: grid;
   grid-column: 1 / 4;
   grid-row: 1 / 3;
 }
