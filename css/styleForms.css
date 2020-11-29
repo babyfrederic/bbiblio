@@ -189,10 +189,10 @@ nav header img{
   display: grid;
   grid-template-area: "l1" "l1" "l1"
                       "l2" "l2" "l2";
-  grid-template-columns: repeat (3,1fr);
+  grid-template-columns: stretch;
   grid-template-rows: repeat (2,1fr);
   justify-items : center;
-  align-items: center;
+  align-items: stretch;
   grid-template-rows: auto;
   
 }

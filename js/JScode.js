@@ -12,3 +12,9 @@ function ajout(){
     para.textContent = 'Rubrique contact ajoutée';
     document.body.appendChild(para);
 }
+var cajout = 0;
+var cretre = 0;
+var dif = 0;
+var cumulajout =0 ;
+var cumulretre = 0;
+var difcumul =0;
