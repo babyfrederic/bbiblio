@@ -91,7 +91,7 @@
 	    i = 0;
 	    j = 0;
     }
-     /**** partie javascript statistiques ****/ 
+     /**** partie javascript statistiques 
     function stat(){
         var t = document.getElementById("output").innerText;
         var i = document.getElementById("output_1").innerText;
@@ -100,13 +100,30 @@
         var ecart = document.getElementById("resultat").innerHTML = t - i;
         var stat_total = document.getElementById("statotal").innerHTML = total + (stat_entrees - stat_sorties);
     }
-    function statplus(){
+    ****/ 
+    var stat_entrees = function stat(){
+        var t = document.getElementById("output").innerText;
+        var i = document.getElementById("output_1").innerText;
+	    var stat_sorties = document.getElementById("output_1").innerText;
+        var ecart = document.getElementById("resultat").innerHTML = t - i;
+        var stat_total = document.getElementById("statotal").innerHTML = total++ + (stat_entrees - stat_sorties);
         var stat_entrees = stat_entrees + t ;
 	    var stat_sorties = stat_sorties + i ;
         var ecart = ecart + (t-i);
         var stat_total = stat_entrees - stat_sorties;
+    }
+        function statplus(se,ss,ec,st){
+        var stat_entrees = stat_entrees++ + t ;
+	    var stat_sorties = stat_sorties++ + i ;
+        var ecart = ecart++ + (t-i);
+        var stat_total = stat_entrees - stat_sorties;
+        se = stat_entrees ;
+        ss = stat_sorties ;
+        ec = ecart ;
+        st = stat_total ;
         document.getElementById("periode").innerHTML = statresult++ + 1;
-        document.getElementById("statotal").innerHTML = total + (t-i); 
+        document.getElementById("statotal").innerHTML = total++ +(t-i); 
+        return (se,ss,ec,st);
     }
     function zerostat(){
         var stat_entrees =0;
@@ -166,29 +183,29 @@
             <hr>
             <div align="center">
                 <label >Total personnes entrées</label>
-                <span id="stat_entrees" > 0</span>   
+                <span id="output" style="color:green;">0</span>  
                 <hr>
                 <div align="center">
                     <label >Total personnes sorties</label>
-                    <span id ="stat_sorties"  > 0 </span>   
+                    <span id="output_1">0</span>   
                     <hr>
                     <div align="center">
                         <label >Total personnes Dedans (ecart)</label>
-                        <span id="stat_total"; ecart >0 </span>
+                        <span id ="resultat"> 0</span>
                         <hr>
                     </div>
+                    <div align="center">
+                        <label >Total des périodes </label>
+                        <span  id="periode"; > 1 </span>
+                        <hr>
+                    </div>
+                    <div align="center">
+                            <h4>nouvelle période comptage</h4>
+                            <button onclick="stat()" id="u">Stats nouvelle periode</button>
+                    </div>
                         <div align="center">
-                            <label >Total des périodes </label>
-                            <span  id="periode"; > 1 </span>
-                            <hr>
-                            <div align="center">
-                                <h4>nouvelle période comptage</h4>
-                                <button onclick="statplus()" id="u">Stats nouvelle periode</button>
-                            </div>
-                            <div align="center">
-                                <h4>remise a zero stats </h4>
-                                <button onclick="zerostat()" id="s">Remise stats periodes a zero</button>
-                            </div>
+                            <h4>remise a zero stats </h4>
+                            <button onclick="zerostat()" id="s">Remise stats periodes a zero</button>
                         </div>
                     </div>
                 </div>
