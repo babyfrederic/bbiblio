@@ -98,7 +98,7 @@
         var stat_entrees = document.getElementById("output").innerText;
 	    var stat_sorties = document.getElementById("output_1").innerText;
         var ecart = document.getElementById("resultat").innerHTML = t - i;
-        var stat_total = document.getElementById("stat_total").innerHTML = total + (t-i);
+        var stat_total = document.getElementById("statotal").innerHTML = total + (stat_entrees - stat_sorties);
     }
     function statplus(){
         var stat_entrees = stat_entrees + t ;
@@ -106,7 +106,7 @@
         var ecart = ecart + (t-i);
         var stat_total = stat_entrees - stat_sorties;
         document.getElementById("periode").innerHTML = statresult++ + 1;
-        document.getElementById("stat_total").innerHTML = total + (t-i); 
+        document.getElementById("statotal").innerHTML = total + (t-i); 
     }
     function zerostat(){
         var stat_entrees =0;
@@ -120,7 +120,7 @@
 	    document.getElementById("resultat").innerHTML =0;
         document.getElementById("stat").innerHTML =0;
         document.getElementById("periode").innerHTML =0;
-        document.getElementById("stat_total").innerHTML =0; 
+        document.getElementById("statotal").innerHTML =0; 
     }
     </script> 
      <!-- /**** fin de partie javascript ****/ --> 
@@ -170,11 +170,11 @@
                 <hr>
                 <div align="center">
                     <label >Total personnes sorties</label>
-                    <span id ="output_1"; stat_sorties > 0 </span>   
+                    <span id ="stat_sorties"  > 0 </span>   
                     <hr>
                     <div align="center">
                         <label >Total personnes Dedans (ecart)</label>
-                        <span id="statotal"; ecart >0 </span>
+                        <span id="stat_total"; ecart >0 </span>
                         <hr>
                     </div>
                         <div align="center">
@@ -186,8 +186,8 @@
                                 <button onclick="statplus()" id="u">Stats nouvelle periode</button>
                             </div>
                             <div align="center">
-                                <h5>remise a zero stats </h5>
-                                <button onclick="zerostat()" id="s">remise stats periodes a zero</button>
+                                <h4>remise a zero stats </h4>
+                                <button onclick="zerostat()" id="s">Remise stats periodes a zero</button>
                             </div>
                         </div>
                     </div>
