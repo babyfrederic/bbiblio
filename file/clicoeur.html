@@ -69,63 +69,65 @@
     <!-- /**** partie javascript ****/ -->
 	<script>
 	var i = 0;
-    var j = 0;
+    var o = 0;
     var statresult = 1 ;
     var total = 0 ;
 	function Count() {
-	    document.getElementById("output").innerHTML = i++ + 1;
+	    document.getElementById("input").innerHTML = i++ + 1;
 	}
 
 	function Count_1() {
-	    document.getElementById("output_1").innerHTML = j++ + 1;
+	    document.getElementById("output").innerHTML = o++ + 1;
 	}
 	function ecart(){
-	   var t = document.getElementById("output").innerText;
-	   var i = document.getElementById("output_1").innerText;
-	   document.getElementById("resultat").innerHTML = t - i;
+	   var ii = document.getElementById("input").innerText;
+	   var ou = document.getElementById("output").innerText;
+	   document.getElementById("resultat").innerHTML = ii - ou;
 	}
 	function zero(){
-	    document.getElementById("output").innerHTML = 0;
-	    document.getElementById("output_1").innerHTML =0;
+	    document.getElementById("input").innerHTML = 0;
+	    document.getElementById("output").innerHTML =0;
 	    document.getElementById("resultat").innerHTML =0;
 	    i = 0;
-	    j = 0;
+        o = 0;
+        
     }
      /**** partie javascript statistiques ****/ 
-    var stat_ent= function stat(stat_entrees){
-        var t = document.getElementById("output").innerText;
-        var i = document.getElementById("output_1").innerText;
-	    var stat_sorties = document.getElementById("output_1").innerText;
-        var ecart = document.getElementById("resultat").innerHTML = t - i;
-        var stat_total = document.getElementById("statotal").innerHTML = total++ + (stat_entrees - stat_sorties);
-        var stat_entrees = stat_entrees + t ;
-	    var stat_sorties = stat_sorties + i ;
-        var ecart = ecart + (t-i);
-        var stat_total = stat_entrees - stat_sorties;
-        return stat_entrees ;
+    var is = 0;
+    var os = 0;
+     function Countsi() {
+	    document.getElementById("inputsi").innerHTML = is++ + 1;
+	}
+
+	function Countso() {
+	    document.getElementById("outputso").innerHTML = os++ + 1;
+	}
+	function ecartst(){
+	   var iis = document.getElementById("inputsi").innerText;
+	   var ous = document.getElementById("outputso").innerText;
+       document.getElementById("resultatst").innerHTML = iis - ous;
+       
+        function stat(){
+        var inp = document.getElementById("input1").innerText;
+        var out = document.getElementById("output1").innerText;
+        document.getElementById("resultatst1").innerHTML = inp - out;
+        document.getElementById("statotal").innerHTML = total++ + (inp - out);
     }
-        function statplus(se,ss,ec,st){
-        var stat_entrees = stat_entrees++ + t ;
-	    var stat_sorties = stat_sorties++ + i ;
-        var ecart = ecart++ + (t-i);
-        var stat_total = stat_entrees - stat_sorties;
-        se = stat_entrees ;
-        ss = stat_sorties ;
-        ec = ecart ;
-        st = stat_total ;
-        document.getElementById("periode").innerHTML = statresult++ + 1;
-        document.getElementById("statotal").innerHTML = total++ +(t-i); 
-        return (se,ss,ec,st);
+        function statplus(){
+        document.getElementById("periode").innerHTML = statresult+ + 1;
+        document.getElementById("statotal").innerHTML = total+ +(t-i); 
     }
     function zerostat(){
-        var stat_entrees =0;
-        var stat_sorties =0;
-        var ecart =0;
-        var stat_total =0;
+        var inp=0;
+        var out=0;
+        var is =0;
+        var os=0;
         var statresult =1;
         var total =0;
-        document.getElementById("output").innerHTML = 0;
-	    document.getElementById("output_1").innerHTML =0;
+        document.getElementById("input").innerHTML = 0;
+        document.getElementById("output").innerHTML =0;
+        document.getElementById("input1").innerHTML = 0;
+	    document.getElementById("output1").innerHTML =0;
 	    document.getElementById("resultat").innerHTML =0;
         document.getElementById("stat").innerHTML =0;
         document.getElementById("periode").innerHTML =0;
@@ -136,7 +138,7 @@
 </head>
 	<body>
         <li><a href="../file/contact.html">Contact</a></li>
-    <h1 style="text-align: center;">Cliqueur</h1>
+        <h1 style="text-align: center;">Cliqueur</h1>
         <div style="width:100%;display: block;margin:auto;text-align: center;float:center;">
             <div class="mi">
                 <!-- /**** compte entrée ****/ -->
@@ -144,7 +146,7 @@
                 <hr>
                 <div align="center">
                     <label>Nombres de personnes entrees</label>
-                    <span id="output" style="color:green;">0</span>
+                    <span id="input" style="color:green;">0</span>
                 </div>
                 <hr>
             </div>
@@ -156,7 +158,7 @@
                 <hr>
                 <div align="center">
                     <label >Nombres de personnes sorties</label>
-                    <span id="output_1">0</span>
+                    <span id="output">0</span>
                 </div>
                 <hr>
             </div>
@@ -170,36 +172,38 @@
             <h3>remise a zero</h3>
             <button onclick="zero()" id="o">remise compteurs a zero</button>
         </div>
+
         <!-- /**** partie affichage stat ****/ -->
         <div align="center" style="display: block;">
-            <h4>stats</h4>
-            <hr>
-            <div align="center">
-                <label >Total personnes entrées</label>
-                <span id="output" style="color:green;">0</span>  
+            <div class="mi">
+                <h4>stats</h4>
                 <hr>
                 <div align="center">
-                    <label >Total personnes sorties</label>
-                    <span id="output_1">0</span>   
+                    <label >Total personnes entrées</label>
+                    <span id="output" style="color:green;">0</span>  
                     <hr>
                     <div align="center">
-                        <label >Total personnes Dedans (ecart)</label>
+                        <label >Total personnes sorties</label>
+                        <span id="output_1">0</span>   
+                        <hr>
+                    </div>
+                    <div align="center">
+                        <label >Total personnes (ecart E/S)</label>
                         <span id ="resultat"> 0</span>
                         <hr>
                     </div>
                     <div align="center">
                         <label >Total des périodes </label>
-                        <span  id="periode"; > 1 </span>
+                        <span  id="periode"> 1 </span>
                         <hr>
                     </div>
                     <div align="center">
-                            <h4>nouvelle période comptage</h4>
-                            <button onclick="stat()" id="u">Stats nouvelle periode</button>
+                        <h4>nouvelle période comptage</h4>
+                        <button onclick="stat()" id="u">Stats nouvelle periode</button>
                     </div>
-                        <div align="center">
-                            <h4>remise a zero stats </h4>
-                            <button onclick="zerostat()" id="s">Remise stats periodes a zero</button>
-                        </div>
+                    <div align="center">
+                        <h4>remise a zero stats </h4>
+                        <button onclick="zerostat()" id="s">Remise stats periodes a zero</button>
                     </div>
                 </div>
             </div>
