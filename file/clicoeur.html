@@ -91,17 +91,8 @@
 	    i = 0;
 	    j = 0;
     }
-     /**** partie javascript statistiques 
-    function stat(){
-        var t = document.getElementById("output").innerText;
-        var i = document.getElementById("output_1").innerText;
-        var stat_entrees = document.getElementById("output").innerText;
-	    var stat_sorties = document.getElementById("output_1").innerText;
-        var ecart = document.getElementById("resultat").innerHTML = t - i;
-        var stat_total = document.getElementById("statotal").innerHTML = total + (stat_entrees - stat_sorties);
-    }
-    ****/ 
-    var stat_entrees = function stat(){
+     /**** partie javascript statistiques ****/ 
+    var stat_ent= function stat(stat_entrees){
         var t = document.getElementById("output").innerText;
         var i = document.getElementById("output_1").innerText;
 	    var stat_sorties = document.getElementById("output_1").innerText;
@@ -111,6 +102,7 @@
 	    var stat_sorties = stat_sorties + i ;
         var ecart = ecart + (t-i);
         var stat_total = stat_entrees - stat_sorties;
+        return stat_entrees ;
     }
         function statplus(se,ss,ec,st){
         var stat_entrees = stat_entrees++ + t ;
@@ -143,6 +135,7 @@
      <!-- /**** fin de partie javascript ****/ --> 
 </head>
 	<body>
+        <li><a href="../file/contact.html">Contact</a></li>
     <h1 style="text-align: center;">Cliqueur</h1>
         <div style="width:100%;display: block;margin:auto;text-align: center;float:center;">
             <div class="mi">
