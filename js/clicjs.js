@@ -2,14 +2,14 @@
 var seuil =0;
 var surface = 120;
 var perim = 8;
-var seuilrec = surface/perim ;
+var seuilrec = surface / perim ;
 /** calcul du seuil recommandé */
 
 function myseuil(){
-  var surface = 100;
+  var surface = 120;
   var perim = 8;
   var seuil = surface / perim;
-  document.getElementById("leseuil").innerHTML =seuil;
+  document.getElementById("leseuil").innerHTML = seuil;
 }
 
 
@@ -23,12 +23,9 @@ function myseuil(){
     var total = 0 ;
 	function Count() {
         document.getElementById("input").innerHTML = i++ + 1;
-        document.getElementById("inputs").innerHTML = ii++ + 1;
-	}
-
+    }
 	function Count_1() {
-        document.getElementById("output").innerHTML = j++ + 1;
-        document.getElementById("outputs").innerHTML = ss++ + 1;
+        document.getElementById("output").innerHTML = j++ + 1;   
 	}
 	function ecart(){
 	   var t = document.getElementById("input").innerText;
@@ -43,22 +40,29 @@ function myseuil(){
 	    j = 0;
     }
      /**** partie javascript statistiques ****/ 
+
+    function Contins() {
+    document.getElementById("inputs").innerHTML = ii++ + 1;
+    }
+    function Contous() {
+     document.getElementById("outputs").innerHTML = ss++ + 1;
+    }
      function ecarts(){
         var ii = document.getElementById("inputs").innerText;
         var ss = document.getElementById("outputs").innerText;
         document.getElementById("resultats").innerHTML = ii - ss;
-
+     }
     function stat(){
         var ii = document.getElementById("inputs").innerText;
         var ss = document.getElementById("outputs").innerText;
         var ecart = document.getElementById("resultats").innerHTML = ii - ss;
         document.getElementById("statotal").innerHTML = total++ + (stat_entrees - stat_sorties);
-        var stat_entrees = stat_entrees + ii ;
-	    var stat_sorties = stat_sorties + ss ;
-        var ecart = ecart + (ii-ss);
-        statresult = statresult + 1;
+        var stat_entrees = stat_entrees++ + ii ;
+	    var stat_sorties = stat_sorties++ + ss ;
+        var ecart = ecart++ + (ii-ss);
+        statresult = statresult++ + 1;
     }
-        function statplus(se,ss,ec,st){
+       /**  function statplus(se,ss,ec,st){
         var stat_entrees = stat_entrees++ + iii ;
 	    var stat_sorties = stat_sorties++ + sss ;
         var ecart = ecart++ + (iii-sss);
@@ -70,6 +74,7 @@ function myseuil(){
         document.getElementById("periodes").innerHTML = statresult++ + 1;
         document.getElementById("statotal").innerHTML = total++ +(iii-sss); 
         return (se,ss,ec,st);
+        **/
     }
     function zerostat(){
         var stat_entrees =0;
