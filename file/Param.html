@@ -6,11 +6,12 @@
         <link rel="stylesheet" href="../css/clicstylecss.css">
         <script defer src="../js/clicjs.js"></script>
     </head>
+
     <!-- /**** compte entrée ****/
     SEUIL D'ALERTE Fixé
     #CALCULER LE SEUIL D'ALERTE
     surfaces = int(input("Surface de l'espace m2 : "))
-    secur = float(input("Périmètre de sécurité (2.5 suggeré) : "))
+    secur = float(input("Périmètre de sécurité (8 suggeré) : "))
     # seuilcalcule=surfaces // secur
     print("le seuil devrait se situer vers : ", surfaces // secur)
     print("Fixer les parametres de base  ")
@@ -23,13 +24,15 @@
         <h6 style="text-align: center;">Détermination du Seuil d'alerte</h6>
 
         <div align="center">
-         
+            <button onclick="myseuil()">Try it</button>
+            <p id="leseuil"></p>
+        </br>
             <label>Surface Du lieu </label>
             <span id="inputspace" style="color:green;"> 120 Surface de l'espace  en m2  </span>
-            </br>
+        </br>
             <span id="inputsecur" style="color:rgb(231, 83, 14);"> 8 Périmètre de sécurité (8 suggeré ) </span>
-            </br>
-            <span id="seuilsecur" style="color:rgb(25, 154, 240);">15 Seuil de tolerance </span>
+        </br>
+            <span id="seuilsecur" style="color:rgb(25, 154, 240);">15 Personnes : Seuil de tolerance </span>
         </div>
 
     </body>

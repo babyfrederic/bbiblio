@@ -1,14 +1,34 @@
+/*** valeurs pour le seuil d'alerte ***/
+var seuil =0;
+var surface = 120;
+var perim = 8;
+var seuilrec = surface/perim ;
+/** calcul du seuil recommandé */
 
+function myseuil(){
+  var surface = 100;
+  var perim = 8;
+  var seuil = surface / perim;
+  document.getElementById("leseuil").innerHTML =seuil;
+}
+
+
+
+/*** valeurs pour les entrees et sorties ***/
 	var i = 0;
     var j = 0;
+    var ii = 0;
+    var ss = 0;
     var statresult = 1 ;
     var total = 0 ;
 	function Count() {
-	    document.getElementById("input").innerHTML = i++ + 1;
+        document.getElementById("input").innerHTML = i++ + 1;
+        document.getElementById("inputs").innerHTML = ii++ + 1;
 	}
 
 	function Count_1() {
-	    document.getElementById("output").innerHTML = j++ + 1;
+        document.getElementById("output").innerHTML = j++ + 1;
+        document.getElementById("outputs").innerHTML = ss++ + 1;
 	}
 	function ecart(){
 	   var t = document.getElementById("input").innerText;
@@ -23,6 +43,11 @@
 	    j = 0;
     }
      /**** partie javascript statistiques ****/ 
+     function ecarts(){
+        var ii = document.getElementById("inputs").innerText;
+        var ss = document.getElementById("outputs").innerText;
+        document.getElementById("resultats").innerHTML = ii - ss;
+
     function stat(){
         var ii = document.getElementById("inputs").innerText;
         var ss = document.getElementById("outputs").innerText;
@@ -53,6 +78,9 @@
         var stat_total =0;
         var statresult =1;
         var total =0;
+        document.getElementById("input").innerHTML = 0;
+	    document.getElementById("output").innerHTML =0;
+	    document.getElementById("resultat").innerHTML =0;
         document.getElementById("inputs").innerHTML = 0;
 	    document.getElementById("outputs").innerHTML =0;
 	    document.getElementById("resultats").innerHTML =0;

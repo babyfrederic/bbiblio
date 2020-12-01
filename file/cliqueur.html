@@ -13,7 +13,7 @@
         <div style="width:100%;display: block;margin:auto;text-align: center;float:center;">
             <div class="mi">
                 <!-- /**** compte entrée ****/ -->
-                <button onclick="Count(); ecart(); stat()">entree</button>
+                <button onclick="Count(); ecart(); ecarts(); stat()">entree</button>
                 <hr>
                 <div align="center">
                     <label>Nombres de personnes entrees</label>
@@ -24,7 +24,7 @@
             <div class="mi">
                 <div align="center">
                     <!-- /**** compte sortie ****/ -->
-                    <button onclick="Count_1();ecart(); stat()" id="a">sortie</button>
+                    <button onclick="Count_1();ecart(); ecarts(); stat()" id="a">sortie</button>
                 </div>
                 <hr>
                 <div align="center">
@@ -67,7 +67,7 @@
                     </div>
                     <div align="center">
                             <h4>nouvelle période comptage</h4>
-                            <button onclick="stat()" id="u">Stats nouvelle periode</button>
+                            <button onclick="stat();ecarts()" id="u" >Stats nouvelle periode</button>
                     </div>
                         <div align="center">
                             <h4>remise a zero stats </h4>
