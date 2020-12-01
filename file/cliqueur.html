@@ -8,27 +8,28 @@
 </head>
 <body>
     <li><a href="../file/contact.html">Contact</a></li>
-    <h1 style="text-align: center;">Cliqueur</h1>
+    <li><a href="../file/param.html">Parametres</a></li>
+    <h2 style="text-align: center;">Cliqueur</h2>
         <div style="width:100%;display: block;margin:auto;text-align: center;float:center;">
             <div class="mi">
                 <!-- /**** compte entrée ****/ -->
-                <button onclick="Count(); ecart(); stat() ">entree</button>
+                <button onclick="Count(); ecart()">entree</button>
                 <hr>
                 <div align="center">
                     <label>Nombres de personnes entrees</label>
-                    <span id="output" style="color:green;">0</span>
+                    <span id="input" style="color:green;">0</span>
                 </div>
                 <hr>
             </div>
             <div class="mi">
                 <div align="center">
                     <!-- /**** compte sortie ****/ -->
-                    <button onclick="Count_1();ecart();stat()" id="a">sortie</button>
+                    <button onclick="Count_1();ecart()" id="a">sortie</button>
                 </div>
                 <hr>
                 <div align="center">
                     <label>Nombres de personnes sorties</label>
-                    <span id="output_1">0</span>
+                    <span id="output">0</span>
                 </div>
                 <hr>
             </div>
@@ -48,11 +49,11 @@
             <hr>
             <div align="center">
                 <label>Total personnes entrées</label>
-                <span id="output" style="color:green;">0</span>  
+                <span id="input" style="color:green;">0</span>  
                 <hr>
                 <div align="center">
                     <label>Total personnes sorties</label>
-                    <span id="output_1">0</span>   
+                    <span id="output">0</span>   
                     <hr>
                     <div align="center">
                         <label>Total personnes Dedans (ecart)</label>
@@ -61,7 +62,7 @@
                     </div>
                     <div align="center">
                         <label>Total des périodes </label>
-                        <span id="periode" ;=""> 1 </span>
+                        <span id="periode" > 1 </span>
                         <hr>
                     </div>
                     <div align="center">
