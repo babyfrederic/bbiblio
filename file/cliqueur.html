@@ -8,12 +8,12 @@
 </head>
 <body>
     <li><a href="../file/contact.html">Contact</a></li>
-    <li><a href="../file/param.html">Parametres</a></li>
+    <li><a href="../file/Param.html">Parametres</a></li>
     <h2 style="text-align: center;">Cliqueur</h2>
         <div style="width:100%;display: block;margin:auto;text-align: center;float:center;">
             <div class="mi">
                 <!-- /**** compte entrée ****/ -->
-                <button onclick="Count(); ecart() ; Countis()">entree</button>
+                <button onclick="Count(); ecart() ">entree</button>
                 <hr>
                 <div align="center">
                     <label>Nombres de personnes entrees</label>
@@ -41,7 +41,7 @@
             </div>
         <div align="center">
             <h3>remise a zero</h3>
-            <button onclick="zero()" id="o">0 remise compteurs a zero</button>
+            <button onclick="zero()" id="o">Remise compteurs à zero</button>
         </div>
         <!-- /**** partie affichage stat ****/ -->
         <div style="display: block;" align="center">
@@ -57,6 +57,7 @@
                     <hr>
                     <div align="center">
                         <label>Total personnes Dedans (ecart)</label>
+                        <button onclick="countis(); countous(); resultats()" id="o">Comptage cumul</button>
                         <span id="resultats"> 0</span>
                         <hr>
                     </div>

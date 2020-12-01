@@ -22,29 +22,29 @@ function myseuil(){
     var statresult = 1 ;
     var total = 0 ;
 	function Count() {
-        document.getElementById("input").innerHTML = i++ + 1;
+        document.getElementById("inputa").innerHTML = i++ + 1;
     }
 	function Count_1() {
-        document.getElementById("output").innerHTML = j++ + 1;   
+        document.getElementById("outputa").innerHTML = j++ + 1;   
 	}
 	function ecart(){
-	   var t = document.getElementById("input").innerText;
-	   var i = document.getElementById("output").innerText;
-	   document.getElementById("resultat").innerHTML = t - i;
+	   var t = document.getElementById("inputa").innerText;
+	   var i = document.getElementById("outputa").innerText;
+	   document.getElementById("resultata").innerHTML = t - i;
 	}
 	function zero(){
-	    document.getElementById("input").innerHTML = 0;
-	    document.getElementById("output").innerHTML =0;
-	    document.getElementById("resultat").innerHTML =0;
+	    document.getElementById("inputa").innerHTML = 0;
+	    document.getElementById("outputa").innerHTML =0;
+	    document.getElementById("resultata").innerHTML =0;
 	    i = 0;
 	    j = 0;
     }
-     /**** partie javascript statistiques ****/ 
+     /**** partie javascript statistiques ** 
 
-    function Contins() {
+    function Countins() {
     document.getElementById("inputs").innerHTML = ii++ + 1;
     }
-    function Contous() {
+    function Countous() {
      document.getElementById("outputs").innerHTML = ss++ + 1;
     }
      function ecarts(){
@@ -74,7 +74,7 @@ function myseuil(){
         document.getElementById("periodes").innerHTML = statresult++ + 1;
         document.getElementById("statotal").innerHTML = total++ +(iii-sss); 
         return (se,ss,ec,st);
-        **/
+        
     }
     function zerostat(){
         var stat_entrees =0;
@@ -93,4 +93,4 @@ function myseuil(){
         document.getElementById("periodes").innerHTML =0;
         document.getElementById("statotal").innerHTML =0; 
     }
-    
+    **/
