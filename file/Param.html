@@ -5,8 +5,45 @@
         <title>Document</title>
         <link rel="stylesheet" href="../css/clicstylecss.css">
         <script src="../js/clicjs.js"></script>
-    </head>
 
+       <script>
+        function setCookie(cname,cvalue,exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        var expires = "expires=" + d.toGMTString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=../";
+        }
+
+        function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+        }
+       function checkCookie() {
+            var user=getCookie("username");
+            if (user != "") {
+              alert("Bonjour " + user);
+            } else {
+               user = prompt("Nous allons Déterminer le seuil de tolerance. Merci d'entrer votre Nom : ","");
+               if (user != "" && user != null) {
+                 setCookie("username", user, 10);
+               }
+            }
+          }
+        </script>
+       
+    </head>
+    <body onload="checkCookie()"></body>
     <!-- /**** compte entrée ****/
     SEUIL D'ALERTE Fixé
     #CALCULER LE SEUIL D'ALERTE
@@ -22,7 +59,7 @@
         <li><a href="../file/cliqueur.html">Cliqueur</a></li>
         <h2 style="text-align: center;">Parametres Cliqueur</h2>
         <h6 style="text-align: center;">Détermination du Seuil d'alerte</h6>
-
+       
         <div align="center">
       
             <label>Surface Du lieu </label>
@@ -35,6 +72,40 @@
         <p id="leseuil" style="color:rgb(25, 154, 240)"></p>
         <span id="leseuil" style="color:rgb(25, 154, 240)">  Personnes : Seuil de tolerance </span>
         </div>
+
+        <button onclick="myFunction()">Ajout</button>
+
+        <p id="demo"></p>
+
+        <div id="demoajax">
+            <h2>The XMLHttpRequest Object</h2>
+            <button type="button" onclick="loadDoc()">Changement contenu Ajax</button>
+        </div>
+        
+        <script>
+        var taille = [];
+        document.getElementById("demo").innerHTML = taille;
+        
+        function myFunction() {
+          taille.push("leseuil");
+          taille[taille.length] = "100";
+          document.getElementById("demo").innerHTML = taille;
+        }
+        </script>
+
+        <script>
+            function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("demoajax").innerHTML =
+                this.responseText;
+                }
+            };
+            xhttp.open("GET", "ajax_info.txt", true);
+            xhttp.send();
+            }
+        </script>
 
     </body>
 

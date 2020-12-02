@@ -39,6 +39,9 @@
                 font-size:30px;
                 padding:2px;	
             }
+        #v {
+                background-color:#8115c9;
+            }
         #o {
                 background-color:#4dd2ff;	
             }
@@ -70,12 +73,14 @@
 	<script>
 	var i = 0;
     var o = 0;
+    var coi = 0 ;
+    var coo =0 ;
+    var tour = 1;
     var statresult = 1 ;
     var total = 0 ;
 	function Count() {
 	    document.getElementById("inputa").innerHTML = i++ + 1;
-	}
-
+    }
 	function Count_1() {
 	    document.getElementById("outputa").innerHTML = o++ + 1;
 	}
@@ -90,8 +95,24 @@
 	    document.getElementById("resultat").innerHTML =0;
 	    i = 0;
         o = 0;
+    }
+
+    /**function Countot() {
+	    document.getElementById("inputot").innerHTML = coi++ + 1;
+    }
+    function Countat() {
+	    document.getElementById("outputat").innerHTML = coo++ + 1;
+	}**/
+     function garde(){
+        var sta = document.getElementById("inputa").innerText;
+        var stb = document.getElementById("outputa").innerText;
+        var tot = document.getElementById("resultatsab").innerHTML = sta - stb;
         
     }
+    function peri (){
+        document.getElementById("uptour").innerHTML = tour++ + 1;
+    }
+    
      /**** partie javascript statistiques
     var inp=0;
     var out=0;
@@ -148,7 +169,7 @@
         <div style="width:100%;display: block;margin:auto;text-align: center;float:center;">
             <div class="mi">
                 <!-- /**** compte entrée ****/ -->
-                <button onclick="Count(); ecart()">entree</button>
+                <button onclick="Count(); ecart(); garde()">entree</button>
                 <hr>
                 <div align="center">
                     <label>Nombres de personnes entrees</label>
@@ -159,7 +180,7 @@
             <div class="mi">
                 <div align="center">
                     <!-- /**** compte sortie ****/ -->
-                    <button onclick="Count_1();ecart();" id ="a">sortie</button>
+                    <button onclick="Count_1(); ecart(); garde()" id ="a">sortie</button>
                 </div>
                 <hr>
                 <div align="center">
@@ -209,12 +230,24 @@
                 <h3>ecart</h3>
                 <span id ="resultat"> 0</span>
             </div>
-        <div align="center">
-            <h3>remise a zero</h3>
-            <button onclick="zero()" id="o">Remise compteurs a zero</button>
-        </div>
-
-        <!-- /**** partie affichage stat ****/ -->
+       
+            <div align="center">
+                <button onclick="zero()" id="o">Remise compteurs a zero</button>
+            </div>
+            <br>
+            <div align="center" style="display: block;">
+                <h3>total cumulé sans RAZ</h3>
+                <span id ="resultatsab"> 0</span>
+                <span id="outputa">0</span>
+                <span id="inputa" style="color:green;">0</span>
+            </div>
+            <div align="center">
+                <button onclick="peri()" id="v">Période Suivante</button>
+                <div align="center" style="display: block;">
+                    <span id ="uptour"> 1</span>
         
+                </div>
+        <!-- /**** partie affichage stat ****/ -->
+    </div>
     </body>
 </html>
