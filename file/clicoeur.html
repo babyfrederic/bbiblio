@@ -73,16 +73,24 @@
 	<script>
 	var i = 0;
     var o = 0;
+    var ii= 0;
+    var ou= 0;
     var coi = 0 ;
     var coo =0 ;
     var tour = 1;
     var statresult = 1 ;
     var total = 0 ;
 	function Count() {
-	    document.getElementById("inputa").innerHTML = i++ + 1;
+        document.getElementById("inputa").innerHTML = i++ + 1;
+    }
+    function Countis() {
+        document.getElementById("inputas").innerHTML = coi++ + 1;
     }
 	function Count_1() {
-	    document.getElementById("outputa").innerHTML = o++ + 1;
+        document.getElementById("outputa").innerHTML = o++ + 1;
+    }
+    function Countos_1() {
+        document.getElementById("outputas").innerHTML = coo++ + 1;
 	}
 	function ecart(){
 	   var ii = document.getElementById("inputa").innerText;
@@ -96,71 +104,39 @@
 	    i = 0;
         o = 0;
     }
-
-    /**function Countot() {
-	    document.getElementById("inputot").innerHTML = coi++ + 1;
-    }
-    function Countat() {
-	    document.getElementById("outputat").innerHTML = coo++ + 1;
-	}**/
      function garde(){
-        var sta = document.getElementById("inputa").innerText;
-        var stb = document.getElementById("outputa").innerText;
-        var tot = document.getElementById("resultatsab").innerHTML = sta - stb;
-        
+        var sta = document.getElementById("inputas").innerText;
+        var stb = document.getElementById("outputas").innerText;
+        var tot = document.getElementById("resultatsab").innerHTML =(sta - stb);
     }
-    function peri (){
+    function peri(){
         document.getElementById("uptour").innerHTML = tour++ + 1;
     }
     
-     /**** partie javascript statistiques
-    var inp=0;
-    var out=0;
-    var is =0;
-    var os=0;
-     function Countis() {
-	    document.getElementById("inputs").innerHTML = is++ + 1;
-	}
+     /**** partie javascript statistiques **/
 
-	function Countos() {
-	    document.getElementById("outputs").innerHTML = os++ + 1;
-	}
-	function ecarts(){
-	   var iis = document.getElementById("inputs").innerText;
-	   var ous = document.getElementById("outputs").innerText;
-       document.getElementById("resultats").innerHTML = iis - ous;
-       
-        function stat(){
-        var inp = document.getElementById("inputst").innerText;
-        var out = document.getElementById("outputst").innerText;
-        document.getElementById("resultatst").innerHTML = inp - out;
-        document.getElementById("statotal").innerHTML = total++ + (inp - out);
-    }
-        function statplus(){
-        document.getElementById("periodes").innerHTML = statresult++ + 1;
-        document.getElementById("statotal").innerHTML = total+ +(t-i); 
-    }
     function zerostat(){
-        var inp=0;
-        var out=0;
-        var is =0;
-        var os=0;
-        var statresult =1;
-        var total =0;
+    var i = 0;
+    var o = 0;
+    var ii= 0;
+    var ou= 0;
+    var coi = 0 ;
+    var coo =0 ;
+    var tour = 1;
+    var statresult = 1 ;
+    var total = 0 ;
+    var sta =0;
+    var stb=0;
+    var tot =0;
         document.getElementById("inputa").innerHTML = 0;
         document.getElementById("outputa").innerHTML =0;
         document.getElementById("resultat").innerHTML =0;
-        document.getElementById("inputs").innerHTML = 0;
-	    document.getElementById("outputs").innerHTML =0;
-        document.getElementById("resultats").innerHTML =0;
-        document.getElementById("inputst").innerHTML = 0;
-	    document.getElementById("outputst").innerHTML =0;
-        document.getElementById("resultatst").innerHTML =0;    
-        document.getElementById("stat").innerHTML =0;
-        document.getElementById("periodes").innerHTML =0;
-        document.getElementById("statotal").innerHTML =0; 
-    } ****/ 
-    </script> 
+        document.getElementById("inputas").innerHTML = 0;
+	    document.getElementById("outputas").innerHTML =0;
+        document.getElementById("resultatsab").innerHTML =0;    
+        document.getElementById("uptour").innerHTML =0;
+    }
+</script> 
      <!-- /**** fin de partie javascript ****/ --> 
 </head>
 	<body>
@@ -169,7 +145,7 @@
         <div style="width:100%;display: block;margin:auto;text-align: center;float:center;">
             <div class="mi">
                 <!-- /**** compte entrée ****/ -->
-                <button onclick="Count(); ecart(); garde()">entree</button>
+                <button onclick="Count(); ecart();Countis() ; garde()">entree</button>
                 <hr>
                 <div align="center">
                     <label>Nombres de personnes entrees</label>
@@ -180,7 +156,7 @@
             <div class="mi">
                 <div align="center">
                     <!-- /**** compte sortie ****/ -->
-                    <button onclick="Count_1(); ecart(); garde()" id ="a">sortie</button>
+                    <button onclick="Count_1(); ecart(); Countos_1() ;garde()" id ="a">sortie</button>
                 </div>
                 <hr>
                 <div align="center">
@@ -188,64 +164,31 @@
                     <span id="outputa">0</span>
                 </div>
                 <hr>
-<!--
-                <div align="center" style="display: block;">
-            <div class="mi">
-                <h4>stats</h4>
-                <hr>
-                <div align="center">
-                    <label >Total personnes entrées</label>
-                    <span id="inputs" style="color:green;">0</span>  
-                    <hr>
-                    <div align="center">
-                        <label >Total personnes sorties</label>
-                        <span id="outputs">0</span>   
-                        <hr>
-                    </div>
-                    <div align="center">
-                        <label >Total personnes (ecart E/S)</label>
-                        <span id ="resultats"> 0</span>
-                        <hr>
-                    </div>
-                    <div align="center">
-                        <label >Total des périodes </label>
-                        <span  id="periodes"> 1 </span>
-                        <hr>
-                    </div>
-                    <div align="center">
-                        <h4>nouvelle période comptage</h4>
-                        <button onclick="Countis();ecarts();stat()" id="u">Stats nouvelle periode</button>
-                    </div>
-                    <div align="center">
-                        <h4>remise a zero stats </h4>
-                        <button onclick="zerostat()" id="s">Remise stats periodes a zero</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-            </div>
-        </div>-->
+
             <br>
             <div align="center" style="display: block;">
                 <h3>ecart</h3>
                 <span id ="resultat"> 0</span>
             </div>
-       
+       <br>
             <div align="center">
-                <button onclick="zero()" id="o">Remise compteurs a zero</button>
+                <button onclick="zero()" id="o">Compteurs a zero</button>
             </div>
             <br>
             <div align="center" style="display: block;">
-                <h3>total cumulé sans RAZ</h3>
-                <span id ="resultatsab"> 0</span>
-                <span id="outputa">0</span>
-                <span id="inputa" style="color:green;">0</span>
+                <h3>total cumulé sans RAZ</h3> 
+                <span id="inputas" style="color:green;">0 "Entrées"</span> 
+                <span id="outputas">0 "Sorties" </span>
+                <span id ="resultatsab"> 0 "Cumul" </span>
             </div>
             <div align="center">
                 <button onclick="peri()" id="v">Période Suivante</button>
                 <div align="center" style="display: block;">
                     <span id ="uptour"> 1</span>
         
+                </div>
+                <div align="center">
+                    <button onclick="zerostat()" id="u">Tous Compteurs a zero</button>
                 </div>
         <!-- /**** partie affichage stat ****/ -->
     </div>
