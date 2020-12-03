@@ -15,82 +15,68 @@ function myseuil(){
 
 
 /*** valeurs pour les entrees et sorties ***/
-	var i = 0;
-    var j = 0;
-    var ii = 0;
-    var ss = 0;
+    var i = 0;
+    var o = 0;
+    var ii= 0;
+    var ou= 0;
+    var coi = 0 ;
+    var coo =0 ;
+    var tour = 1;
     var statresult = 1 ;
     var total = 0 ;
 	function Count() {
         document.getElementById("inputa").innerHTML = i++ + 1;
     }
+    function Countis() {
+        document.getElementById("inputas").innerHTML = coi++ + 1;
+    }
 	function Count_1() {
-        document.getElementById("outputa").innerHTML = j++ + 1;   
+        document.getElementById("outputa").innerHTML = o++ + 1;
+    }
+    function Countos_1() {
+        document.getElementById("outputas").innerHTML = coo++ + 1;
 	}
 	function ecart(){
-	   var t = document.getElementById("inputa").innerText;
-	   var i = document.getElementById("outputa").innerText;
-	   document.getElementById("resultata").innerHTML = t - i;
+	   var ii = document.getElementById("inputa").innerText;
+	   var ou = document.getElementById("outputa").innerText;
+	   document.getElementById("resultat").innerHTML = ii - ou;
 	}
 	function zero(){
 	    document.getElementById("inputa").innerHTML = 0;
 	    document.getElementById("outputa").innerHTML =0;
-	    document.getElementById("resultata").innerHTML =0;
-	    i = 0;
-	    j = 0;
-    }
-     /**** partie javascript statistiques ** 
-
-    function Countins() {
-    document.getElementById("inputs").innerHTML = ii++ + 1;
-    }
-    function Countous() {
-     document.getElementById("outputs").innerHTML = ss++ + 1;
-    }
-     function ecarts(){
-        var ii = document.getElementById("inputs").innerText;
-        var ss = document.getElementById("outputs").innerText;
-        document.getElementById("resultats").innerHTML = ii - ss;
-     }
-    function stat(){
-        var ii = document.getElementById("inputs").innerText;
-        var ss = document.getElementById("outputs").innerText;
-        var ecart = document.getElementById("resultats").innerHTML = ii - ss;
-        document.getElementById("statotal").innerHTML = total++ + (stat_entrees - stat_sorties);
-        var stat_entrees = stat_entrees++ + ii ;
-	    var stat_sorties = stat_sorties++ + ss ;
-        var ecart = ecart++ + (ii-ss);
-        statresult = statresult++ + 1;
-    }
-       /**  function statplus(se,ss,ec,st){
-        var stat_entrees = stat_entrees++ + iii ;
-	    var stat_sorties = stat_sorties++ + sss ;
-        var ecart = ecart++ + (iii-sss);
-        var stat_total = stat_entrees - stat_sorties;
-        se = stat_entrees ;
-        ss = stat_sorties ;
-        ec = ecart ;
-        st = stat_total ;
-        document.getElementById("periodes").innerHTML = statresult++ + 1;
-        document.getElementById("statotal").innerHTML = total++ +(iii-sss); 
-        return (se,ss,ec,st);
-        
-    }
-    function zerostat(){
-        var stat_entrees =0;
-        var stat_sorties =0;
-        var ecart =0;
-        var stat_total =0;
-        var statresult =1;
-        var total =0;
-        document.getElementById("input").innerHTML = 0;
-	    document.getElementById("output").innerHTML =0;
 	    document.getElementById("resultat").innerHTML =0;
-        document.getElementById("inputs").innerHTML = 0;
-	    document.getElementById("outputs").innerHTML =0;
-	    document.getElementById("resultats").innerHTML =0;
-        document.getElementById("statotal").innerHTML =0;
-        document.getElementById("periodes").innerHTML =0;
-        document.getElementById("statotal").innerHTML =0; 
+	    i = 0;
+        o = 0;
     }
-    **/
+     function garde(){
+        var sta = document.getElementById("inputas").innerText;
+        var stb = document.getElementById("outputas").innerText;
+        var tot = document.getElementById("resultatsab").innerHTML =(sta - stb);
+    }
+    function peri(){
+        document.getElementById("uptour").innerHTML = tour++ + 1;
+    }
+    
+     /**** partie javascript statistiques **/
+
+    function zerostat(){
+    var i = 0;
+    var o = 0;
+    var ii= 0;
+    var ou= 0;
+    var coi = 0 ;
+    var coo =0 ;
+    var tour = 1;
+    var statresult = 1 ;
+    var total = 0 ;
+    var sta =0;
+    var stb=0;
+    var tot =0;
+        document.getElementById("inputa").innerHTML = 0;
+        document.getElementById("outputa").innerHTML =0;
+        document.getElementById("resultat").innerHTML =0;
+        document.getElementById("inputas").innerHTML = 0;
+	    document.getElementById("outputas").innerHTML =0;
+        document.getElementById("resultatsab").innerHTML =0;    
+        document.getElementById("uptour").innerHTML =1;
+    }
