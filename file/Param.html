@@ -53,40 +53,39 @@
     print("le seuil devrait se situer vers : ", surfaces // secur)
     print("Fixer les parametres de base  ")
     seuil_alerte = int(input("donner le Seuil d'alerte CHOISI: ")) -->
-
+    
     <body>
         <li><a href="../file/contact.html">Contact</a></li>
         <li><a href="../file/cliqueur.html">Cliqueur</a></li>
         <h2 style="text-align: center;">Parametres Cliqueur</h2>
-        <h6 style="text-align: center;">Détermination du Seuil d'alerte</h6>
-       
+        <h5 style="text-align: center;">Détermination du Seuil d'alerte</h5> 
         <div align="center">
-      
-            <label>Surface Du lieu </label>
-            
+            <label>Surface Du lieu </label> 
             <span id="inputspace" style="color:green;"> 120 Surface de l'espace  en m2  </span>
         </br>
             <span id="inputsecur" style="color:rgb(231, 83, 14);"> 8 Périmètre de sécurité (8 suggeré ) </span>
         </br>
         </br>
-        <button onclick="myseuil()">Try it</button>
+        <button onclick="myseuil()">Calculer</button>
         <p id="leseuil" style="color:rgb(25, 154, 240)"></p>
         <span id="leseuil" style="color:rgb(25, 154, 240)">  Personnes : Seuil de tolerance </span>
         </div>
-
+        <h4>Horloge </h4>
+        <p id='tog'>Il est actuellement <span id='heure'></span></p>
+        <button id='bouton'>Cacher / Afficher l'heure</button>
+        
+    
         <button onclick="myFunction()">Ajout</button>
 
         <p id="demo"></p>
 
         <div id="demoajax">
-            <h2>The XMLHttpRequest Object</h2>
-            <button type="button" onclick="loadDoc()">Changement contenu Ajax</button>
+            <h5>The XMLHttpRequest Object</h5>
+            <button type="button" onclick="loadDoc()">Changement contenu</button>
         </div>
         
         <script>
-        Const surface1 = 0;
-        Let surface2 =100;
-
+        var surface = 0;
         var taille = [];
         document.getElementById("demo").innerHTML = taille;
         
@@ -96,7 +95,7 @@
           document.getElementById("demo").innerHTML = taille;
         }
         </script>
-
+    <!--
         <script>
             function loadDoc() {
             var xhttp = new XMLHttpRequest();
@@ -110,7 +109,7 @@
             xhttp.send();
             }
         </script>
-
+    -->
     </body>
 
 </html>
