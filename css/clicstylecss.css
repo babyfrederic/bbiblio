@@ -22,7 +22,7 @@ button {
 }
 
 button:hover {
-    background-color:#3e8e41;
+    background-color:#172bdd;
 }
 #resultat{
     background-color:#1411c4;
@@ -56,4 +56,12 @@ margin: 0;
 }
 button {
 padding:20px;
+}
+.bouton {
+    background-color: #021802;
+    color: white;
+    padding: 30px;
+    font-size: 20px;
+    border: none;
+    cursor:pointer;
 }

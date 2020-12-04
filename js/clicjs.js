@@ -20,21 +20,6 @@ window.addEventListener('load',horloge);
         }
       });
 
-/*** valeurs pour le seuil d'alerte ***/
-var seuil =0;
-var surface = 120;
-var perim = 8;
-var seuilrec = surface / perim ;
-/** calcul du seuil recommandé */
-
-function myseuil(){
-  var surface = 120;
-  var perim = 8;
-  var seuil = surface / perim;
-  document.getElementById("leseuil").innerHTML = seuil;
-}
-
-
 
 /*** valeurs pour les entrees et sorties ***/
     var i = 0;
@@ -101,4 +86,21 @@ function myseuil(){
 	    document.getElementById("outputas").innerHTML =0;
         document.getElementById("resultatsab").innerHTML =0;    
         document.getElementById("uptour").innerHTML =1;
+    }
+/*** valeurs pour le seuil d'alerte ***/
+/** calcul du seuil recommandé */
+
+function myseuil(){
+    var surface = Param.html.getElementById("surface" ).innerHTML;
+    var perisecu = Param.html.getElementById("inputsecur").innerHTML ;
+  var seuil = surface / perisecu;
+  document.getElementById("leseuil").innerHTML = seuil;
+}
+
+
+    
+    function myFunction() {
+      taille.push("Le seuil de Réference :") ;
+      taille[taille.length] = seuil ;
+      document.getElementById("demo").innerHTML = taille ;
     }
